@@ -1,0 +1,35 @@
+mixin s-tuning()
+	// start s-tuning
+	+b.s-tuning.section#s-tuning.text-white.d-none.d-lg-block
+		.container
+			h2( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".8s"): span Гибкая настройка доступа
+			.row
+				mixin item(i,p, sm)
+					+e.col-wow.col-lg-4( class=" wow fadeInLeft " data-wow-offset="80" data-wow-duration=".8s")
+						+e.item
+							+e.img-wrap
+								img.res-i(src=`img/tuning-i-${i}.png`, alt="")
+							.h6.strong= p
+							block
+					// .col-lg-4
+				+item("1","Есть три роли пользователей","")
+					ul
+						li Владелец объекта
+						li Диспетчер группы объектов
+						li Администратор/супервайзер
+				+item("2","Уровни доступа определяют, может ли пользователь","")
+					ul
+						li Только просматривать информацию
+						li Ставить объект на охрану и снимать
+						li Комментировать/закрывать тревоги
+						li Менять настройки системы
+						li Обновлять прошивку
+				+item("3","Можно разделять доступ к различным датчикам","")
+					ul
+						li Охране – взлом и проникновение
+						li Сантехнику – протечки
+						li Электрику – отключение 220В и т.д.
+						li Арендаторам отдельных холодильных камер 	выделить доступ только к их датчикам и т.п
+			div( class=" wow bounceIn" data-wow-offset="80" data-wow-duration=".8s")
+				+e.A.btn.btn.btn-lg.btn-secondary.btn-block.strong(href="#" data-toggle="modal" data-target="#modal-win" data-title="Получить демо-доступ к системе" data-order="Получить демо-доступ к системе"   data-btn="Получить доступ"  ): span Получить демо-доступ к системе
+	// end s-tuning

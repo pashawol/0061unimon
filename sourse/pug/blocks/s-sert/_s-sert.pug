@@ -1,0 +1,22 @@
+mixin s-sert()
+	// start s-sert
+	+b.s-sert.section#s-sert
+		.container
+			
+			h2.text-center( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s"): span Оборудование сертифицировано
+			+e.sub-title.h6.text-center Соответствует Приказу &#8470;&nbsp;646н и&nbsp;СанПин СП&nbsp;3.3.2.3332-16
+			+e.inner  
+				+e.row.row.no-gutters.gal( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+					- for (var y = 1; y < 3; y++)
+						- for (var x = 1; x < 3; x++)
+							+e.col.col-auto
+								+e.img-wrap(href=`img/img-2/sert-${x}.jpg`)
+									img.res-i(src=`img/img-2/sert-${x}.jpg`, alt="")
+							// .col
+							
+						+e.col.col-auto
+							+e.img-wrap--rotate(href=`img/img-2/sert-3.jpg`)
+								img.res-i(src=`img/img-2/sert-3.jpg`, alt="")
+						// .col
+			
+	// end s-sert

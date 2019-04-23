@@ -1,0 +1,36 @@
+mixin s-control()
+	// start s-control
+	+b.s-control.section#s-control
+		.container
+			h2( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s"): span Чем еще можно управлять
+			.row
+				mixin item(i,p)
+					+e.col-wow.col-lg-4.col-sm-6(  class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+						+e.item
+							.row
+								.col-auto
+									+e.img-wrap
+										img.res-i(src=`img/control-i-${i}.png`, alt="")
+								.col.h6.mb-0= p
+					// .col-lg-4.col-sm-6
+				+item("1","Отопительные приборы ")
+				+item("2","Вентиляция")
+				+item("3","Перекрытие кранов")
+				+item("4","Кондиционеры")
+				+item("5","Освещение ")
+				+item("6","Перезагрузка оборудования")
+				+item("7","Увлажнители")
+				+item("8","Насосы и полив ")
+				+item("9","Другое - через реле и RS-485")
+			block
+
+
+
+
+
+
+
+
+
+
+	// end s-control

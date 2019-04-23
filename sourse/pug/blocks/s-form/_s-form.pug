@@ -1,0 +1,203 @@
+include ../mixin-wrap/mixin-wrap.pug
+include ../mixin-wrap/form-wrap.pug
+mixin s-form()
+	// start s-form
+	+b.SECTION.s-form--head
+		.container
+			#form-wrap(class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".8s")
+				+form-wrap()
+					.text-center
+						.d-none.d-md-block
+							+e.big-title.h3.strong.text-white Рассчитать ориентировочную смету
+						+e.big-title.h3.strong.text-white.d-md-none Рассчитать стоимость 
+							br
+							| оборудования
+					form
+						.row.align-items-center
+							.col-lg-auto.d-none.d-md-block
+								.h5.text-white Сколько мест хранения лекарств?
+							.col
+								.row.row--small
+									.col-md-6
+										+input("number","Кол-во помещений")(class="form-wrap__input-icon form-wrap__input--number ")
+											+e.SPAN.icon-wrap.d-lg-none
+												+icon("count")
+									
+									.col-md-6
+										+input("number","Кол-во холодильников ")(class="form-wrap__input-icon form-wrap__input--number ")
+											+e.SPAN.icon-wrap.d-lg-none
+												+icon("count-refr")
+									
+						.row
+
+							.col-lg-12.text-white.d-none.d-md-block
+								+e.checkbox-group
+									.h5.pt-2.pb-3 Что необходимо?
+									.row.justify-content-between
+										.col-auto.pt-1
+											+in-ch("installation")
+												+e.SPAN.small Оборудование
+											a.popovr-link(tabindex="0"  role="button" data-toggle="popover" data-trigger="focus" data-content="And here's some amazing content. It's very engaging. Right?")
+										.col-auto.pt-1
+											+in-ch("installation")
+												+e.SPAN.small Монтаж
+											a.popovr-link(tabindex="0"  role="button" data-toggle="popover" data-trigger="focus" data-content="And here's some amazing content. It's very engaging. Right?")
+										.col-auto.pt-1
+											+in-ch("installation")
+												+e.SPAN.small Поверка
+											a.popovr-link(tabindex="0"  role="button" data-toggle="popover" data-trigger="focus" data-content="And here's some amazing content. It's very engaging. Right?")
+										.col-auto.pt-1
+											+in-ch("installation")
+												+e.SPAN.small Картирование 
+											a.popovr-link(tabindex="0"  role="button" data-toggle="popover" data-trigger="focus" data-content="And here's some amazing content. It's very engaging. Right?")
+										.col-auto.pt-1
+											+in-ch("installation")
+												+e.SPAN.small Валидация
+											a.popovr-link(tabindex="0"  role="button" data-toggle="popover" data-trigger="focus" data-content="And here's some amazing content. It's very engaging. Right?")
+							.col-lg-6.d-none.d-md-block
+								+input("text","Как Вас зовут?")(class="form-wrap__input-icon ")
+									+e.SPAN.icon-wrap
+										+icon("user")
+							
+							.col-lg-6.order-lg-0.order-1
+								+input("email","Электронная почта")(class="form-wrap__input-icon ")
+									+e.SPAN.icon-wrap
+										+icon("mail")
+							
+							.col-lg-6
+								+input("tel","Номер телефона")(class="form-wrap__input-icon ")
+									+e.SPAN.icon-wrap
+										+icon("tel")
+							
+							.col-lg-6.d-none.d-md-block
+								+input("text","Где находится объект")(class="form-wrap__input-icon ")
+									+e.SPAN.icon-wrap
+										+icon("map")
+							//- .col-12.order-md-0.order-first
+							//- 	+ta("Опишите Вашу задачу")
+						
+						+e.BUTTON.btn.btn.btn-block.btn-primary(type="submit"  ) Получить смету 
+							//- .col-lg-6.text-white.d-none.d-md-block
+							//- 	.h6 Нужен ли монтаж
+							//- 	.row
+							//- 		.col-auto.pt-1
+							//- 			+in-rad("installation")
+							//- 				+e.SPAN.small Да
+									
+							//- 		.col-auto.pt-1
+							//- 			+in-rad("installation")
+							//- 				+e.SPAN.small Нет
+									
+							//- 		.col-auto.pt-1
+							//- 			+in-rad("installation")
+							//- 				+e.SPAN.small Не решил
+					+b.polite Нажимая кнопку « Получить смету 
+						|», Вы соглашаетесь на 
+						|
+						+e.A.link.tdu.d-inline-block(href="Soglasie.pdf" target="_blank")  обработку персональных данных
+	// end s-form
+
+	
+mixin s-form-3()
+	// start s-form
+	+b.SECTION.s-form--head.--3land
+		.container.d-none.d-lg-block
+			#form-wrap(class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".8s")
+				+form-wrap()
+					.text-center.text-white
+						.d-none.d-md-block
+							+e.big-title.h3.strong Заполните форму и&nbsp;мы&nbsp;бесплатно подберем 3&nbsp;варианта оборудования
+							p Оптимальные по&nbsp;цене и&nbsp;функционалу именно для Вашей задачи
+						+e.big-title.h3.strong.text-white.d-md-none Оптимальные по&nbsp;цене и&nbsp;функционалу именно для Вашей задачи
+
+					form 
+						.row
+							.col-lg-6.d-none.d-md-block
+								+input("text","Как Вас зовут?")(class="form-wrap__input-icon ")
+									+e.SPAN.icon-wrap
+										+icon("user")
+							
+							.col-lg-6.order-lg-0.order-1
+								+input("email","Электронная почта")(class="form-wrap__input-icon ")
+									+e.SPAN.icon-wrap
+										+icon("mail")
+							
+							.col-lg-6
+								+input("tel","Номер телефона")(class="form-wrap__input-icon ")
+									+e.SPAN.icon-wrap
+										+icon("tel")
+							
+							.col-lg-6.d-none.d-md-block
+								+input("text","Населенный пункт")(class="form-wrap__input-icon ")
+									+e.SPAN.icon-wrap
+										+icon("map")
+							//- .col-12.order-md-0.order-first
+							//- 	+ta("Опишите Вашу задачу")
+						
+							.col-12.py-3.d-none.d-lg-block
+								.h6.text-white Что Вы хотите контролировать?
+							.col-4.pt-1.d-none.d-lg-block
+								+in-ch("")
+									+e.SPAN.small.text-white Температуру воздуха  
+							// .col-4.pt-1.d-none.d-lg-block
+							
+							.col-4.pt-1.d-none.d-lg-block
+								+in-ch("")
+									+e.SPAN.small.text-white Охраные датчики
+							// .col-4.pt-1.d-none.d-lg-block
+							.col-4.pt-1.d-none.d-lg-block
+								+in-ch("")
+									+e.SPAN.small.text-white Задымление 
+							// .col-4.pt-1.d-none.d-lg-block
+							.col-4.pt-1.d-none.d-lg-block
+								+in-ch("")
+									+e.SPAN.small.text-white Управление отоплением 
+							// .col-4.pt-1.d-none.d-lg-block
+							.col-4.pt-1.d-none.d-lg-block
+								+in-ch("")
+									+e.SPAN.small.text-white Протечка воды
+							// .col-4.pt-1.d-none.d-lg-block
+							.col-4.pt-1.d-none.d-lg-block
+								+in-ch("")
+									+e.SPAN.small.text-white Влажность
+							// .col-4.pt-1.d-none.d-lg-block
+							.col-4.pt-1.d-none.d-lg-block
+								+in-ch("")
+									+e.SPAN.small.text-white Отключение сети 220В  
+							// .col-4.pt-1.d-none.d-lg-block
+							.col-4.pt-1.d-none.d-lg-block
+								+in-ch("")
+									+e.SPAN.small.text-white Утечка газа
+							// .col-4.pt-1.d-none.d-lg-block
+							.col-4.pt-1.d-none.d-lg-block
+								+in-ch("")
+									+e.SPAN.small.text-white Давление
+							// .col-4.pt-1.d-none.d-lg-block
+
+						+e.foot-row.row.align-items-center
+							.col-lg-6.order-lg-0.order-last
+								+e.BUTTON.btn--3.btn.btn-lg.btn-block.btn-primary(type="submit"  )
+									span.d-none.d-md-block Бесплатный подбор решения
+									span.d-md-none Отправить заявку
+							.col-lg-6.text-white.d-none.d-lg-block
+								.h6 Нужен ли монтаж
+								.row
+									.col-auto.pt-1
+										+in-rad("installation")
+											+e.SPAN.small Да
+									
+									.col-auto.pt-1
+										+in-rad("installation")
+											+e.SPAN.small Нет
+									
+									.col-auto.pt-1
+										+in-rad("installation")
+											+e.SPAN.small Не решил
+					+b.polite Нажимая кнопку «
+						span.d-none.d-md-inline Бесплатный подбор решения
+						span.d-md-none Отправить заявку
+						|», Вы соглашаетесь на 
+						|
+						+e.A.link.tdu.d-inline-block(href="Soglasie.pdf" target="_blank")  обработку персональных данных
+	// end s-form
+

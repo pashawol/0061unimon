@@ -1,0 +1,91 @@
+mixin s-why-we()
+	// start s-why-we
+	+b.s-why-we.section.pb-0#s-why-we
+		.container
+			h2.text-md-center.text-left(class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s"): span Почему мы?
+			mixin item(i)
+				+e.item(class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+					.row
+						+e.img-wrap.col-auto
+							img.res-i(src=`img6/why-we-${i}.png`, alt="")
+						block
+			+item("1")
+				.col Наши специалисты прошли обучение в&nbsp;Первом Московском государственном медицинском университете имени И.М. Сеченова Министерства здравоохранения
+			
+			+item("2")
+				.col Для картирования 
+					| 
+					span.text-primary инженерный персонал выезжает на&nbsp;объект 
+					|
+					| Сеченова Министерства здравоохранения Российской Федерации 
+			
+			+item("3")
+				.col Наши отчеты содержат подробную аналитику с&nbsp;наглядными 3D-визуализациями содержат подробную аналитику с&nbsp;наглядными 3D-визуализациями
+			
+			+item("4")
+				.col Используем 
+					| 
+					span.text-primary современное поверенное оборудование
+					|
+					|  при проведении работ (логгеры Dallas Semiconductor iButton, Testo Saveris&nbsp;2 T2, тепловизоры Testo).
+			
+			+item("5")
+				.col Выполняем все работы &laquo;под ключ&raquo; от&nbsp;картирования и&nbsp;валидации, до&nbsp;установки системы ONLINE-мониторинга и&nbsp;получения фарм. лицензии
+					
+			+e.foot-title(class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s") Это важные требования, несоблюдение которых приводит к&nbsp;серьезным проблемам при проверках!
+			+e.mob-text.d-lg-none.h4.strong  Что еще понадобится  после картирования?
+			+e.dark-block(class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+				.row
+					.col-lg-auto.text-center
+						.img-wrap
+							img.res-i(src="img6/comp-table-phone.png", alt="")
+					.col
+						.d-none.d-lg-block.h5 А&nbsp;еще наша компания разработала и&nbsp;производит уникальную 
+							| 
+							span.text-primary систему непрерывного мониторинга 24/7 температуры и&nbsp;влажности
+							|
+							|, удовлетворяющую всем требованиям Приказа&nbsp;646н и&nbsp;другим нормативам.
+						.d-lg-none
+							.h5.fw-600.text-primary Система онлайн 
+								br
+								|  мониторинга температуры и&nbsp;влажности
+							p Наша компания разработала и&nbsp;производит уникальную 
+								| 
+								span.text-primary систему непрерывного мониторинга 24/7 температуры и&nbsp;влажности
+								|
+								|, удовлетворяющую всем требованиям приказа 646н и&nbsp;другим нормативам.
+			.row
+				mixin foot-i(i,t)
+					+e.foot-col.col-lg-4.col-md-6
+						+e.foot-item
+							+e.img-bg(style=`background-image: url(img6/for-${i}.jpg);`)= t
+							+e.caption
+								block
+					// /+e.foot-col
+				+foot-i('1','Для складов')
+					.h6  Датчик температуры и&nbsp;влажности,
+						br
+						| с&nbsp;поверкой на&nbsp;2&nbsp;года&nbsp;&mdash; 
+						strong.text-primary 4900&nbsp;руб.
+						br
+						| Головной блок&nbsp;&mdash; 
+						strong.text-primary 24&nbsp;900&nbsp;руб.
+				+foot-i('2','Для аптек')
+					.h6 Датчик температуры с&nbsp;поверкой
+						br
+						| на&nbsp;2&nbsp;года&nbsp;&mdash; 
+						strong.text-primary 2900&nbsp;руб.
+						br
+						| Головной блок&nbsp;&mdash; 
+						strong.text-primary 8900&nbsp;руб.
+				+foot-i('3','Для транспорта')
+					.h6 Система с&nbsp;2&nbsp;датчиками температуры с&nbsp;поверкой на&nbsp;2&nbsp;года&nbsp;&mdash; 
+						|
+						|
+						strong.text-primary 24&nbsp;500&nbsp;руб.
+
+
+
+
+
+	// end s-why-we

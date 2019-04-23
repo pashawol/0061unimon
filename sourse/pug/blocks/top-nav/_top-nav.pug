@@ -1,0 +1,99 @@
+include ../mixin-wrap/mixin-wrap.pug
+mixin mob-mnu()
+	
+	+b.trop.main-mnu.hidden-mnu.hidden-lg.landingMenu2.d-lg-none#mobile-mnu
+		.wrapp-hidden
+			.row
+				.col
+					+e.logo
+						a(href="/" )
+							img(src="img/logo.png", alt="alt")
+				.col-auto
+					.toggle-mnu.toggle-mnu-1.toggle-button
+						span
+			+mnu()
+			.text-right
+	//  мобильное меню
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav
+		.container
+			.row
+				.col-md-auto.col.d-lg-none
+					.toggle-mnu.toggle-mnu-1.d-lg-none.toggle-button
+						span
+				.col-lg-auto.col.d-none.d-md-block
+					+e.logo
+						a(href="/" )
+							img(src="img/logo.png", alt="alt")
+				.col.d-none.d-lg-block
+					+mnu()
+				.col-auto
+					+e.cont
+						div
+							+e.A.tel.h4(href="tel:8(800)7665251") 8 (800) 766 52 51
+								+icon('tel')
+						.d-none.d-md-block
+							+e.A.link(href="#" data-toggle="modal" data-target="#modal-win" data-title="Заказать звонок" data-order="На бесплатную консультацию" data-par="Мы изучим вашу ситуацию и  предложим  варианты лучших решений" data-btn="Заказать звонок"  ) Бесплатный  звонок
+					
+	// end top-nav
+mixin top-nav-white() 
+	// start top-nav
+	// замени классы
+	+b.top-nav--white
+		.container
+			.row
+				// замени классы
+				.col-auto.d-lg-none
+					.toggle-mnu.toggle-mnu-1.d-lg-none.toggle-button
+						span
+				// добавил блок
+				+e.basket-wrap.col
+					.basket-element
+						+e.basket(href="#")
+							+icon("basket")
+							+e.basket-count 2
+				.col-lg-auto.col.d-none.d-md-block
+					+e.logo
+						a(href="/" )
+							img(src="img/logo.png", alt="alt")
+				.col.d-none.d-lg-block
+					+mnu()
+				.col-auto
+					+e.cont
+						div
+							+e.A.tel.h4(href="tel:8(800)7665251") 8 (800) 766 52 51
+								+icon('tel')
+						.d-none.d-md-block
+							+e.A.link(href="#" data-toggle="modal" data-target="#modal-win" data-title="Заказать звонок" data-order="На бесплатную консультацию" data-par="Мы изучим вашу ситуацию и  предложим  варианты лучших решений" data-btn="Заказать звонок"  ) Бесплатный  звонок
+					
+mixin top-nav-page() 
+	// end top-nav
+	+b.top-nav--white.--page
+		.container
+			.row
+				// замени классы
+				.col-auto.d-lg-none
+					.toggle-mnu.toggle-mnu-1.d-lg-none.toggle-button
+						span
+				// добавил блок
+				+e.basket-wrap.col
+					.basket-element
+						+e.basket(href="#")
+							+icon("basket")
+							+e.basket-count 2
+				.col-lg-auto.col.d-none.d-md-block
+					+e.logo
+						a(href="/" )
+							img(src="img/logo.png", alt="alt")
+				.col.d-none.d-lg-block
+					+mnu()
+				.col-auto
+					+e.cont
+						div
+							+e.A.tel.h4(href="tel:8(800)7665251") 8 (800) 766 52 51
+								+icon('tel')
+						.d-none.d-md-block
+							+e.A.link(href="#" data-toggle="modal" data-target="#modal-win" data-title="Заказать звонок" data-order="На бесплатную консультацию" data-par="Мы изучим вашу ситуацию и  предложим  варианты лучших решений" data-btn="Заказать звонок"  ) Бесплатный  звонок
+					
+	// end top-nav

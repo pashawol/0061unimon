@@ -1,0 +1,42 @@
+mixin s-mode()
+	// start s-mode
+	+b.s-mode.section#s-mode
+		.container
+			h2( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s"): span Режимы управления оборудованием
+			.row.justify-content-center.text-lg-left.text-center
+				mixin item(i,p)
+					.col-lg-2.col-md-3.col-sm-4.col-6( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+						+e.item
+							+e.img-wrap
+								img.res-i(src=`img/mode-${i}.png`, alt="")
+							.h6.strong= p
+					// .col-lg-4.col-sm-6
+				+item("1","Из личного  кабинета")
+				+item("2","По SMS")
+				+item("3","По входу")
+				+item("4","Гибкие  сценарии")
+				+item("5","По расписанию")
+				+item("6","Циклически")
+	// end s-mode
+
+mixin s-mode-3()
+	// start s-mode
+	+b.s-mode--3.section#s-mode.d-none.d-md-block
+		.container
+			h2( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s"): span Режимы управления оборудованием
+			.row.justify-content-center.text-lg-left.text-center
+				mixin item(i,p)
+					.col-lg-2.col-md-3.col-sm-4.col-6( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+						+e.item
+							+e.img-wrap
+								img.res-i(src=`img/mode-${i}.png`, alt="")
+							.h6.strong= p
+					// .col-lg-4.col-sm-6
+				+item("1","Из личного  кабинета")
+				+item("2","По SMS")
+				+item("3","По входу")
+				+item("4","Гибкие  сценарии")
+				+item("5","По расписанию")
+				+item("6","Циклически")
+	// end s-mode
+

@@ -1,0 +1,197 @@
+mixin header-block()
+	// start header-block
+	+b.header-block#header-block
+		.container
+			.row
+				.col-lg-7.text-lg-left.text-center( class=" wow fadeInLeft " data-wow-offset="80" data-wow-duration="1.5s")
+					h1 Контроль показателей датчиков и&nbsp;управление оборудованием через Интернет и&nbsp;SMS
+					+e.row.row.align-items-center.d-none.d-lg-flex
+						.col-auto
+							img(src="img/head-img-1.png", alt="alt")
+						.col
+							p Подберем несколько вариантов оборудования, закупим, настроим, смонтируем и обучим
+							+e.gray Сделано в России	
+				.col.text-sm-left.text-center( class=" wow fadeInRight " data-wow-offset="80" data-wow-duration="1.5s")
+					+e.img-block.gal
+						a(href="img/head-img-2.png")
+						a(href="img/head-img-2.png")
+						a(href="img/head-img-2-mob.png")
+						img.res-i(src="img/head-img-3.png", alt="")
+			.d-none.d-md-block
+				+e.A.btn.btn.btn-lg.btn-block.btn-primary.scroll-link(href="#form-wrap"     class=" wow fadeInUp " data-wow-offset="80" data-wow-duration="1.5s"): span Бесплатный подбор решения
+		+e.before( class=" wow fadeInRight " data-wow-offset="80" data-wow-duration="1.5s")
+			+e.before-inner
+	// end header-block
+
+mixin header-block-control-temp()
+	// start header-block
+	+b.header-block--control-temp#header-block
+		.container
+			.row
+				.col-lg-8( class=" wow fadeInLeft " data-wow-offset="80" data-wow-duration="1.5s")
+					h1.text-lg-left.text-center 
+						span.d-none.d-lg-inline Автоматизация мониторинга 
+						| 
+						span.d-lg-none Мониторинг 
+						| 
+						| температуры и&nbsp;влажности в&nbsp;местах хранения лекарств
+						span.d-none.d-lg-inline енных средств и&nbsp;МИБП
+					.h6.text-lg-left.text-center Соответствует Приказу &#8470;&nbsp;646н и&nbsp;СанПин СП&nbsp;3.3.2.3332-16
+					+e.row.row.align-items-center.d-none.d-lg-flex
+						.col-auto.d-none.d-lg-block
+							+e.img-wrap--control-temp: img(src="img/img-2/head-img-2.png", alt="")
+						.col
+							+e.text-block--control-temp
+								+e.small-title Самое выгодное  предложение 
+									span.d-none.d-lg-inline на&nbsp;рынке
+								+e.list-item Блок управления  
+									| 
+									span.text-primary от 19 000 руб.
+								
+								+e.list-item Датчики 
+									| 
+									span.text-primary от 1 900 руб.
+								
+				.col.text-sm-left.text-center( class=" wow fadeInRight " data-wow-offset="80" data-wow-duration="1.5s")
+					+e.img-block--control-temp.gal
+						a(href="img/head-img-2.png")
+						a(href="img/head-img-2.png")
+						a(href="img/head-img-2-mob.png")
+						img.res-i(src="img/img-2/head-img-2-2.png", alt="")
+			+e.text-block--control-temp.d-lg-none
+				+e.small-title Самое выгодное  предложение 
+					span.d-none.d-lg-inline на&nbsp;рынке
+				+e.list-item Блок управления  
+					| 
+					span.text-primary от 19 000 руб.
+				
+				+e.list-item Датчики 
+					| 
+					span.text-primary от 1 900 руб.
+		+e.before-control-temp( class=" wow fadeInRight " data-wow-offset="80" data-wow-duration="1.5s")
+			//- +e.before-inner
+	// end header-block
+
+
+mixin header-block-3()
+	// start header-block
+	+b.header-block--3#header-block
+		.container
+			.row
+				.col-lg-7.text-lg-left.text-center( class=" wow fadeInLeft " data-wow-offset="80" data-wow-duration="1.5s")
+					h1 Дистанционный контроль температуры  и&nbsp;управление отоплением через  Интернет и&nbsp;SMS
+					.h4.d-none.d-lg-block Решения «под ключ»  
+						strong.text-primary от 3950 руб.
+					+e.row.row.align-items-center.d-none.d-lg-flex
+						.col-auto
+							p Пройдите тест для подбора оптимального 
+								br
+								| по&nbsp;цене и&nbsp;функционалу оборудования и
+								br
+								| получите  
+								strong.text-primary датчик температуры в&nbsp;подарок!
+						.col
+							+e.img-wrap-3
+								img(src="img/img-3/head-img-3.png", alt="alt")
+				.col.text-sm-left.text-center( class=" wow fadeInRight " data-wow-offset="80" data-wow-duration="1.5s")
+					+e.img-block--3.gal
+						a(href="img/head-img-2.png")
+						a(href="img/head-img-2.png")
+						a(href="img/head-img-2-mob.png")
+						img.res-i(src="img/head-img-3.png", alt="")
+			.h4.d-lg-none.text-center.pt-3 Решения «под ключ»  
+				strong.text-primary от 3950 руб.
+			.d-none.d-lg-block
+				+e.A.btn--3.btn.btn-lg.btn-block.btn-primary.scroll-link.mx-0(href="#s-prod"     class=" wow fadeInUp " data-wow-offset="80" data-wow-duration="1.5s"): span Подобрать оборудование
+		+e.before( class=" wow fadeInRight " data-wow-offset="80" data-wow-duration="1.5s")
+			+e.before-inner
+	// end header-block
+
+mixin header-block-4()
+	// start header-block
+	+b.header-block--4#header-block
+		.container
+			.row
+				.col-lg-6
+					.d-lg-none: h1.pt-0 ZONT-H1V
+					+e.slider-wrap
+						+e.slider--big
+							- for (var x = 0; x < 2; x++)
+								+e.slide--big
+									+e.slide-img-wrap--big
+										img.res-i(src="#" data-lazy="img/img-4/head-1.png", alt="")
+								// +e.slide
+						+e.slider--small.d-none.d-md-block
+							- for (var x = 0; x < 2; x++)
+								+e.slide--small
+									+e.slide-img-wrap--small
+										img.res-i(src="#" data-lazy="img/img-4/head-1.png", alt="")
+								// +e.slide
+				.col
+					.d-none.d-lg-block: h1 ZONT-H1V
+					p  Предназначен для дистанционного контроля и&nbsp;управления отопительным котлом с&nbsp;помощью SMS-команд, интернет через мобильное приложение для Android и&nbsp;iOS.
+					+e.list-item Настройка термостата и&nbsp;управление его работой осуществляется по&nbsp;каналу GSM связи и&nbsp;через интернет
+					+e.list-item Термостат в&nbsp;соответствии заданными параметрами автоматически регулирует работу котла
+					+e.list-item Термостат может контролировать техническое состояние котла 
+					.row.align-items-center
+						.col-auto
+							+e.price-big 9 900  ₽
+						.col-auto
+							.buy-element
+								+e.A.btn-basket.mt-0(href="#" data-toggle="modal" data-target="#modal-one-click" data-title="Купить " data-order="Купить "   data-btn="Купить"  ): span Купить
+							.basket-element
+								+b.block-add
+									+e.btn--minus.btn
+										+icon('minus')
+									input.form-control(type="text" value="2 шт.")
+									+e.btn--plus.btn
+										+icon('plus-sm')
+					.row.row--small.basket-element
+						.col-auto
+							+e.A.btn-basket(href="#"): span В корзину
+						.col-auto
+							+e.A.btn-one-click.btn-secondary(href="#" data-toggle="modal" data-target="#modal-one-click" data-title="Купить в один клик" data-order="Купить в один клик"   data-btn="Купить"  ): span Купить в один клик
+	// end header-block
+
+
+mixin header-block-6()
+	// start header-block
+	+b.header-block--6#header-block(style="background-image: url(../img6/header-bg-6.jpg);")
+		.container
+			.row
+				.col-lg-7.text-lg-left.text-center( class=" wow fadeInLeft " data-wow-offset="80" data-wow-duration="1.5s")
+					+e.H1.title.ttu ТЕМПЕРАТУРНОЕ КАРТИРОВАНИЕ  И&nbsp;ВАЛИДАЦИЯ
+					+e.title-sub Согласно Приказу Минздрава 646н, СП&nbsp;3.3.2.3332-16, GDP/GMP
+					+e.UL.list-block 
+						mixin link(i,t,ts)
+							+e.LI.list-block-item
+								+e.list-block-link(href="#")
+									+e.DIV.list-icon
+										img(src=`img6/${i}`, alt="")
+									span.d-none.d-sm-block= t
+									span.d-sm-none= ts
+						+link("warehouse.png",'Складов (фармацевтических, пищевых и других)',"Складов")
+						+link("hospital.png",'Медучреждений (больниц, поликлиник и т.п.)',"Медучреждений")
+						+link("pharmacy.png",'Аптек',"Аптек")
+						+link("L0001.png",'Холодильных камер',"Холодильных камер")
+						+link("refrigerator-truck.png",'Авторефрижераторов',"Авторефрижераторов") 
+						
+
+
+
+
+				.col.text-sm-left.text-center( class=" wow fadeInRight " data-wow-offset="80" data-wow-duration="1.5s")
+					+form-wrap()(class="modal-win")
+						.h3.strong.text-center.text-white.pb-3 Рассчитаем стоимость картирования за&nbsp;1&nbsp;час
+						form 
+							+input("hidden"," a")(class="order ")
+							+input("text","Как Вас зовут?")(class="form-wrap__input-icon ")
+								+e.SPAN.icon-wrap
+									+icon("user") 
+							+input("tel","Номер телефона")(class="form-wrap__input-icon ")
+								+e.SPAN.icon-wrap
+									+icon("tel")
+							+e.BUTTON.btn.btn.btn-block.btn-primary(type="submit" value="" ) Бесплатный расчет
+						+polite('Бесплатный расчет')
+	
+	// end header-block

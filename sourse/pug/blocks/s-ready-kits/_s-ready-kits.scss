@@ -1,0 +1,173 @@
+.s-ready-kits {
+	h2{
+		margin-bottom: em(14);
+	}
+	&__group{
+		border: 1px solid #d2d2d2;
+		background-color: #f5f5f5;
+		border-radius: 5px ;
+	}	
+	&__group-body{
+		@include media-breakpoint-up(xl) {
+
+		}
+		padding: 32px 37px 0px;
+		// padding: 22px 7px 15px;
+	}
+	&__title{
+		font-size: 26px;
+		font-weight: 700;
+		line-height: 1.92;
+		margin-bottom: em(2);
+	}
+	&__title-gray{
+		opacity: 0.7;
+		color: $body-color; 
+		font-size: $em-base;
+		font-weight: 500; 
+		text-transform: uppercase; 
+		letter-spacing: 1.5px;
+		margin-bottom: em(15);
+	}
+	p{
+		margin-bottom: em(30);
+	}
+	&__col{
+		margin-bottom: 40px;
+	}
+	&__col:not(:last-child){
+		&::before{
+			content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAARElEQVQ4T2NkIAJIbZ7yH6TsmW8OIyHlBBWADBg1EG8wjoYh9uAhKdnAFBNKsMTKM1LdQGJsJsnLowZiDYHRMKRvaQMAhnNM1dNvMwUAAAAASUVORK5CYII=);
+			position: absolute;
+			right: -10px;
+			top: 82px;
+			
+		}
+	}
+	&__row{
+		@include roww(19);
+	}
+	&__item{
+		height: 100%;
+		background-color: #ffffff;
+		text-align: center;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 1.5;
+		position: relative;
+		padding: 5px 10px;
+		padding-bottom: 30px;
+		border-radius: 5px;
+	}
+	&__img-wrap{
+		height: 100px;
+		line-height: 100px;
+		vertical-align: middle;
+		margin-bottom: em(20);
+		img{
+			max-height: 100%;
+		}
+	}
+	&__count{
+		position: absolute;
+		width: 31px;
+		height: 31px;
+		background-color: $primary;
+		border-radius: 50%;
+		right: -15px;
+		top: -15px;
+		color: #ffffff;
+		line-height: 31px;
+		text-align: center;
+		vertical-align: middle;
+		font-size: 10px; 
+	}
+	&__group{
+		margin-bottom: 39px;
+	}
+	&__group-foot{
+		@include media-breakpoint-up(xl) {
+
+		}
+		padding: 16px 37px 20px;
+		// padding: 16px 27px 20px;
+
+		color: #ffffff;
+		border-radius: 0 0 5px 5px;
+			background-color: $body-color;
+			.row{
+				align-items: center;
+			}
+			.ttu.small{
+				letter-spacing: 1.4px;
+			}
+	}
+	&__btn-foot,
+	&__btn-basket{
+		@extend .btn;
+		@extend .btn-block;
+		@extend .btn-primary;
+		font-weight: 600;
+		width: 165px;
+		
+	}
+	&__btn-foot{
+		margin-top: 10px;
+		width: 411px;
+		margin-left: auto;
+		margin-right: auto;
+		@extend .btn-lg;
+		font-size: $h5-font-size;
+	}
+	
+	&__btn-one-click{ 
+		@extend .btn;
+		@extend .btn-block;
+		font-weight: 600;
+		// @extend .btn-secondary;
+		@include media-breakpoint-up(xl) {
+
+			width: 244px; 
+		}
+		width: 220px;
+	}
+
+
+	&__price{
+		font-size: $h4-font-size;
+		font-weight: 700;
+		text-align: center;
+		@include media-breakpoint-up(xl) {
+
+			width: 180px;
+		}
+		// width: 130px;
+	}
+	//
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {
+		padding-top: 50px;
+	}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+}

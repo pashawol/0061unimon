@@ -1,0 +1,21 @@
+mixin form-head()
+	form.js-form-validate( method="post" action="action.php" data-parsley-validate="") 
+		input(type='hidden', class="order", name='Вид формы', value=`Заявка  с сайта` ) 
+		block
+mixin input( t , pl)
+	+e.input-wrap.form-group
+		label
+			block
+			+e.INPUT.input.form-control(type= t placeholder= pl)&attributes(attributes)
+	// +e.input-wrap
+mixin ta(pl)
+	+e.input-wrap.form-group
+		label
+			block
+			+e.TEXTAREA.input.form-control( placeholder= pl)&attributes(attributes)
+	// +e.input-wrap
+
+mixin form-wrap()
+	+b.form-wrap&attributes(attributes)
+		block
+		

@@ -1,0 +1,114 @@
+.s-doc {
+	padding-bottom: 0 !important;
+	// padding-right: 10px;
+	// padding-left: 10px;
+	h2{
+		margin-bottom: em(12);
+	}
+	&__btn{
+		display: block;
+		@include media-breakpoint-up(sm) {
+			
+			max-width: 177px;
+		}
+		max-width: 137px;
+		margin-bottom: 19px;
+		img{
+								@include media-breakpoint-up(sm) {
+			max-height: 52px;
+								}
+								max-height: 37px;
+		}
+
+	}
+	&__item{
+		display: flex;
+		align-items: center;
+		background-image: url(../img/img-4/download.png);
+		background-repeat: no-repeat;
+		background-position: right center;
+		align-items: center;
+		padding-right: 40px;
+		&:not(:last-child){
+
+			border-bottom: 1px solid #d2d2d2;
+		}
+		@extend .text-body;
+		width: 100%;	
+		padding-bottom: 11px;
+		padding-top: 6px;
+		@include media-breakpoint-up(sm) {
+
+			font-size: $h6-font-size;
+		}
+		font-size: 12px;
+		margin-bottom: 0;
+
+	}
+	&__img-wrap{
+		@include media-breakpoint-up(sm) 
+		{
+
+			width: 60px;
+		}
+		width: 50px;
+		img{
+			max-width: 90%;
+		}
+		// padding-top: 10px;
+		display: block;
+	}
+
+	//
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(md) {
+		.row{
+			justify-content: center;
+		}
+		}
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+}
+.section-wrap{
+	position: relative;
+	@include media-breakpoint-down(sm) {
+	 
+		background-color: $gray;
+		// padding-bottom: 30px;
+		// padding-top: 20px;
+		&::before {
+			content: '';
+			position: absolute;
+			background-color: #f3f3f3;
+			$w: em(1000.45);
+			$h: em(382.5);
+			height: $h;
+			width: $w;
+			border-radius:#{$w} / #{$h};
+			top: -2.75em;
+			left: 50%;
+			margin-left: -$w / 2;
+		}
+
+	}
+}

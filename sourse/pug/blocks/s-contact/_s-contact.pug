@@ -1,0 +1,230 @@
+mixin s-contact()
+	// start s-contact
+	+b.s-contact.section#s-contact
+		+e.body
+			.container
+				h2.text-center( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration="1.5s"): span Наши контакты
+				.d-lg-none
+					form
+						+e.SELECT.input-wrap.form-control
+							option(value="Москва" selected default) Москва
+							option(value="Санкт-Петербург") Санкт-Петербург
+							option(value="Новосибирск") Новосибирск
+							option(value="Самара") Самара
+							option(value="Пермь") Пермь
+							option(value="Казань") Казань
+				+e.head.d-none.d-lg-block
+					+e.A.btn-head.btn.btn-outline-primary.active(href="#"): span Москва
+					+e.A.btn-head.btn.btn-outline-primary(href="#"): span Санкт-Петербург
+					+e.A.btn-head.btn.btn-outline-primary(href="#"): span Новосибирск
+					+e.A.btn-head.btn.btn-outline-primary(href="#"): span Самара
+					+e.A.btn-head.btn.btn-outline-primary(href="#"): span Пермь
+					+e.A.btn-head.btn.btn-outline-primary(href="#"): span Казань
+				.row
+					.col-md-4
+						+e.A.tel.strong.text-body(href="tel:8(499)110-50-13") 8 (499) 110-50-13
+						+e.smaller Консультация по продуктам
+						.d-none.d-md-block
+							+e.A.btn.btn.btn-block.btn-primary(href="#" data-toggle="modal" data-target="#modal-win" data-title="Заказать звонок" data-order="На бесплатную консультацию" data-par="Мы изучим вашу ситуацию и  предложим  варианты лучших решений" data-btn="Заказать звонок"  ): span Заказать звонок
+					.col-md-4
+						+e.A.tel.strong.text-body(href="tel:8(499)110-50-13") 8 (499) 110-50-13
+						+e.smaller Техподдержка
+						+e.A.mail.text-body(href='mailto:') mail@primesystems.ru
+						+e.smaller.mb-0.d-none.d-sm-block По всем вопросам
+					.col-md-4
+						.addr Москва, улица Льва Толстого, 19/2, офис 33
+							.small
+								span.text-secondary  Время работы: 
+								| Пн-Пт 10:00 – 19:00
+						p 
+							img(src="img/m-1.png", alt="alt") 
+							img(src="img/m-2.png", alt="alt") 
+							| Парк Культуры
+						+e.smallest.d-none.d-md-block ООО «Эволюция»
+							br
+							| ОГРН 123456789
+							br
+							| ИНН 7445512485
+		+e.map(data-slideout-ignore)
+			<script  async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A57a56bc44235cf433be6000bbbbe96f6d98b19c923ecb1a7746e4da1ca26652b&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+	// end s-contact
+
+
+mixin s-contact-2()
+	// start s-contact
+	+b.s-contact.section#s-contact
+		.container
+			#form-wrap(class="d-none d-lg-block wow fadeInUp " data-wow-offset="80" data-wow-duration=".8s")
+				+form-wrap()
+					.text-center
+						.d-none.d-md-block
+							.text-center
+								+e.title.text-white Мы ищем партнеров!
+								+e.title-sub.h6.text-white Получить предложение для дистрибуторов
+					form
+						.row.align-items-center
+							.col-lg-auto.d-none.d-md-block
+								
+						.row
+ 
+							.col-lg-6.d-none.d-md-block
+								+input("text","Как Вас зовут?")(class="form-wrap__input-icon ")
+									+e.SPAN.icon-wrap
+										+icon("user")
+							
+							.col-lg-6.order-lg-0.order-1
+								+input("email","Электронная почта")(class="form-wrap__input-icon ")
+									+e.SPAN.icon-wrap
+										+icon("mail")
+							
+							.col-lg-6
+								+input("tel","Номер телефона")(class="form-wrap__input-icon ")
+									+e.SPAN.icon-wrap
+										+icon("tel")
+							
+							.col-lg-6.d-none.d-md-block
+								+input("text","В каком городе находитесь?")(class="form-wrap__input-icon ")
+									+e.SPAN.icon-wrap
+										+icon("map") 
+							
+							.col-lg-6.d-none.d-md-block
+								+input("text","Название компании")(class="form-wrap__input-icon ")
+									+e.SPAN.icon-wrap
+										+icon("cart") 
+							
+							.col-lg-6
+								+e.BUTTON.btn.btn.btn-block.btn-primary(type="submit"  ) Запросить  оптовые цены
+					+b.polite Нажимая кнопку « Запросить  оптовые цены 
+						|», Вы соглашаетесь на 
+						|
+						+e.A.link.tdu.d-inline-block(href="Soglasie.pdf" target="_blank")  обработку персональных данных
+		+e.body
+			.container
+				h2.text-center( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration="1.5s"): span Наши контакты
+				.d-lg-none
+					form
+						+e.SELECT.input-wrap.form-control
+							option(value="Москва" selected default) Москва
+							option(value="Санкт-Петербург") Санкт-Петербург
+							option(value="Новосибирск") Новосибирск
+							option(value="Самара") Самара
+							option(value="Пермь") Пермь
+							option(value="Казань") Казань
+				+e.head.d-none.d-lg-block
+					+e.A.btn-head.btn.btn-outline-primary.active(href="#"): span Москва
+					+e.A.btn-head.btn.btn-outline-primary(href="#"): span Санкт-Петербург
+					+e.A.btn-head.btn.btn-outline-primary(href="#"): span Новосибирск
+					+e.A.btn-head.btn.btn-outline-primary(href="#"): span Самара
+					+e.A.btn-head.btn.btn-outline-primary(href="#"): span Пермь
+					+e.A.btn-head.btn.btn-outline-primary(href="#"): span Казань
+				.row
+					.col-md-4
+						+e.A.tel.strong.text-body(href="tel:8(499)110-50-13") 8 (499) 110-50-13
+						+e.smaller Консультация по продуктам
+						.d-none.d-md-block
+							+e.A.btn.btn.btn-block.btn-primary(href="#" data-toggle="modal" data-target="#modal-win" data-title="Заказать звонок" data-order="На бесплатную консультацию" data-par="Мы изучим вашу ситуацию и  предложим  варианты лучших решений" data-btn="Заказать звонок"  ): span Заказать звонок
+					.col-md-4
+						+e.A.tel.strong.text-body(href="tel:8(499)110-50-13") 8 (499) 110-50-13
+						+e.smaller Техподдержка
+						+e.A.mail.text-body(href='mailto:') mail@primesystems.ru
+						+e.smaller.mb-0.d-none.d-sm-block По всем вопросам
+					.col-md-4
+						.addr Москва, улица Льва Толстого, 19/2, офис 33
+							.small
+								span.text-secondary  Время работы: 
+								| Пн-Пт 10:00 – 19:00
+						p 
+							img(src="img/m-1.png", alt="alt") 
+							img(src="img/m-2.png", alt="alt") 
+							| Парк Культуры
+						+e.smallest.d-none.d-md-block ООО «Эволюция»
+							br
+							| ОГРН 123456789
+							br
+							| ИНН 7445512485
+		+e.map(data-slideout-ignore)
+			<script  async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A57a56bc44235cf433be6000bbbbe96f6d98b19c923ecb1a7746e4da1ca26652b&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+	// end s-contact
+
+
+mixin s-contact-5()
+	// start s-contact
+	+b.s-contact--page.section
+		+e.body
+			.container
+				h2.text-center( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration="1.5s"): span Наши контакты
+				.d-lg-none
+					form
+						+e.SELECT.input-wrap.form-control
+							option(value="Москва" selected default) Москва
+							option(value="Санкт-Петербург") Санкт-Петербург
+							option(value="Новосибирск") Новосибирск
+							option(value="Самара") Самара
+							option(value="Пермь") Пермь
+							option(value="Казань") Казань
+				+e.head.d-none.d-lg-block
+					+e.A.btn-head.btn.btn-outline-primary.active(href="#"): span Москва
+					+e.A.btn-head.btn.btn-outline-primary(href="#"): span Санкт-Петербург
+					+e.A.btn-head.btn.btn-outline-primary(href="#"): span Новосибирск
+					+e.A.btn-head.btn.btn-outline-primary(href="#"): span Самара
+					+e.A.btn-head.btn.btn-outline-primary(href="#"): span Пермь
+					+e.A.btn-head.btn.btn-outline-primary(href="#"): span Казань
+				.row
+					.col-lg-6
+						.row
+							.col-md-6
+								+e.A.tel.strong.text-body(href="tel:8(499)110-50-13") 8 (499) 110-50-13
+								+e.smaller Консультация по продуктам
+							.col-md-6
+								+e.A.tel.strong.text-body(href="tel:8(499)110-50-13") 8 (499) 110-50-13
+								+e.smaller Техподдержка
+							.col-md-6
+								+e.A.mail.text-body(href='mailto:') mail@primesystems.ru
+								+e.smaller.mb-0.d-none.d-sm-block По всем вопросам
+							.col-md-6
+								.d-none.d-md-block
+									+e.A.btn--page.btn.btn-block.btn-primary(href="#" data-toggle="modal" data-target="#modal-win" data-title="Заказать звонок" data-order="На бесплатную консультацию" data-par="Мы изучим вашу ситуацию и  предложим  варианты лучших решений" data-btn="Заказать звонок"  ): span Заказать звонок
+							.col-md-12
+								.addr Москва, улица Льва Толстого, 19/2, офис 33
+									.small
+										span.text-secondary  Время работы: 
+										| Пн-Пт 10:00 – 19:00
+								p 
+									img(src="img/m-1.png", alt="alt") 
+									img(src="img/m-2.png", alt="alt") 
+									| Парк Культуры
+								+e.smallest.d-none.d-md-block ООО «Эволюция»
+									br
+									| ОГРН 123456789/ ИНН 7445512485
+					.col-lg-6.order-lg-0.order-last
+						+e.map(data-slideout-ignore)
+							<script  async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A57a56bc44235cf433be6000bbbbe96f6d98b19c923ecb1a7746e4da1ca26652b&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+					.col-lg-6.d-none.d-lg-block
+						.text-block
+							h2: span О нас
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt 
+					.col-lg-6
+						+form-wrap()(class="mt-0")
+							.h3.strong.text-center.text-white.pb-3 Обратная связь
+							form 
+								+input("hidden"," a")(class="order ")
+								+ta('Введите собщение')
+								.row
+									.col-xl-6
+										+input("text","Как Вас зовут?")(class="form-wrap__input-icon ")
+											+e.SPAN.icon-wrap
+												+icon("user") 
+									.col-xl-6
+										+input("tel","Номер телефона")(class="form-wrap__input-icon ")
+											+e.SPAN.icon-wrap
+												+icon("tel")
+									.col-xl-6
+										+input("email","Email")(class="form-wrap__input-icon ")
+											+e.SPAN.icon-wrap
+												+icon("mail")
+									.col-xl-6 
+										+e.BUTTON.btn.btn.btn-block.btn-primary(type="submit" value="" ) Отправить
+							+polite('Отправить')
+
+	// end s-contact

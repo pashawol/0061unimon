@@ -1,0 +1,30 @@
+mixin s-other-differents()
+	// start s-other-differents
+	+b.s-other-differents.section#s-other-differents.d-none.d-md-block
+		.container
+			h2 Другие особенности нашей системы
+			.row
+				mixin item(i)
+					+e.col.col-lg-3.col-md-4
+						+e.item(class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+							+e.img-wrap
+								img.res-i(src=`img6/different-i-${i}.png`, alt="")
+							block
+					// /.col-lg-3.col-md-4.col-sm-6
+				+item("1")
+					+e.text Датчики из&nbsp;Госреестра СИ&nbsp;с&nbsp;поверкой
+				+item("2")
+					+e.text SMS и&nbsp;PUSH-уведомления при тревогах
+				+item("3")
+					+e.text Современный облачный и&nbsp;локальный софт
+				+item("4")
+					+e.text Контроль через мобильные приложения или браузер
+				+item("5")
+					+e.text Резервное питание и&nbsp;каналы&nbsp;связи
+				+item("6")
+					+e.text Хранение данных телеметрии до&nbsp;5&nbsp;лет
+				+item("7")
+					+e.text Разделение доступа между&nbsp;арендаторами
+				+item("8")
+					+e.text Российское оборудование и&nbsp;ПО
+	// end s-other-differents

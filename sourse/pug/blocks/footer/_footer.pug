@@ -1,0 +1,41 @@
+include ../mixin-wrap/mixin-wrap.pug
+mixin footer()
+	+b.FOOTER.footer
+		.container
+			.row.d-none.d-md-flex
+				.col-3
+					+e.title.strong Мониторинг
+					ul
+						li: a(href="#", title="title") Температуры 
+						li: a(href="#", title="title") Влажности 
+						li: a(href="#", title="title") Давления
+				 
+				.col-3
+					+e.title.strong Применения
+					ul
+						li: a(href="#", title="title")  Управление отоплением
+						li: a(href="#", title="title")  Хранение лекарств
+				 
+				.col-3
+					+e.title.strong Оборудование
+					ul
+						li: a(href="#", title="title")   UniBox
+						li: a(href="#", title="title")   WirenBoard
+				.col-3
+					+e.mnu
+						ul
+							li: a(href="#", title="title")  О системе
+							li: a(href="#", title="title")  Партнерство
+							li: a(href="#", title="title")  Техподдержка
+							li: a(href="#", title="title")  Документация
+							li: a(href="#", title="title")  Контакты
+			.row.align-items-center
+				.col-md-3
+					+e.logo
+						a(href="/" )
+							img(src="img/logo.png", alt="alt")
+				.col.d-none.d-md-block
+					+e.smaller  Контроль показателей датчиков и&nbsp;управление оборудованием  через Интернет и&nbsp;SMS компания &laquo;Unimon&raquo;
+				.col-md-3
+					+e.A.polite.tdu(href="#", title="title")  Политика в&nbsp;отношении обработки и&nbsp;защиты персональных данных
+

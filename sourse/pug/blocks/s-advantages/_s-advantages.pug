@@ -1,0 +1,208 @@
+mixin s-advantages()
+	// start s-advantages
+	+b.s-advantages.section#s-advantages
+		+e.before
+			+e.before-inner
+		.container
+			h2( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+				span.d-none.d-md-inline-block 9&nbsp;преимуществ мониторинга с&nbsp;Unimon
+				span.d-md-none Преимущества
+					br 
+					|  мониторинга с Unimon
+			.row
+				mixin item(i)
+					+e.col-wow.col-lg-4.col-sm-6( class=" wow fadeInLeft " data-wow-offset="80" data-wow-duration=".6s")&attributes(attributes)
+						+e.item
+							+e.img-wrap
+								img.res-i(src=`img/advantages-i-${i}.png`, alt="")
+							block
+							//- .h6.strong= p
+							//- .small= sm
+					// .col-lg-4.col-sm-6
+
+				+item("1")
+					.h6.strong Нет затрат на приобретение
+							br
+							| сервера, лицензий ПО и зарплату
+							br
+							| системному администратору
+					.small Поддержку инфраструктуры для хранения
+						br
+						|  и бесперебойного доступа к данным — 
+						br
+						|  мы берем на себя (SLA 99%)
+				+item("2","Для работы с системой достаточно браузера","Не надо устанавливать специальное ПО на рабочие компьютеры")
+					.h6.strong Для работы с системой
+						br
+						|  достаточно браузера
+					.small Не&nbsp;надо устанавливать специальное
+						br
+						|  ПО&nbsp;на&nbsp;рабочие компьютеры
+
+				+item("3","Можно работать через приложение на смартфоне","Есть бесплатные мобильные приложения для Android и iOS")
+					.h6.strong Можно работать через
+						br
+						|  приложение на&nbsp;смартфоне
+					 
+					.small Есть бесплатные мобильные приложения
+						br
+						|  для Android и&nbsp;iOS
+
+				+item("4","Доступ к системе из любой точки мира, где есть Интернет","Удобно для сотрудников в разъездах,  мобильных групп реагирования и руководства")
+					.h6.strong Доступ к&nbsp;системе из&nbsp;любой точки мира,
+						br
+						|  где есть Интернет
+					.small Удобно для сотрудников в&nbsp;разъездах, 
+						br
+						| мобильных групп реагирования
+						br
+						| и&nbsp;руководства
+				+item("5","Серверную инфраструктуру предоставляет «Mail.ru Group»","Данные хранятся на территории РФ, в независимых ЦОДах уровня TIER III, с тройной репликацией")(class="d-none d-sm-block")
+					.h6.strong Серверную инфраструктуру
+						br
+						| предоставляет &laquo;Mail.ru Group&raquo;
+					.small Данные хранятся на&nbsp;территории&nbsp;РФ,
+						br
+						| в&nbsp;независимых ЦОДах уровня TIER III,
+						br
+						| с&nbsp;тройной репликацией
+
+				+item("6","Не надо заниматься обновлением ПО","В облаке всегда актуальная и стабильная версия системы")(class="d-none d-sm-block")
+					.h6.strong Не&nbsp;надо заниматься
+						br
+						| обновлением&nbsp;ПО
+					.small В&nbsp;облаке всегда актуальная и&nbsp;стабильная
+						br
+						| версия системы
+
+				+item("7","Территориально распределенные объекты на одном экране","Не требуется много серверов и их синхронизации")(class="d-none d-sm-block")
+					.h6.strong Территориально распределенные
+						br
+						| объекты на&nbsp;одном экране 
+					.small Не&nbsp;требуется много серверов
+						br
+						| и&nbsp;их&nbsp;синхронизации
+
+				+item("8","Уникальный механизм  обработки тревог","Оператор отражает действия  по устранению, а руководитель  видит это на мобильном")(class="d-none d-sm-block")
+					.h6.strong Уникальный механизм 
+						br
+						| обработки тревог
+					.small Оператор отражает действия 
+						br
+						| по&nbsp;устранению, а&nbsp;руководитель 
+						br
+						| видит это на&nbsp;мобильном
+
+				+item("9","Возможность доработки  системы под ваши задачи","Подключим к облаку ваше оборудование,  переделаем интерфейс и дизайн системы")
+					.h6.strong Возможность доработки 
+						br
+						| системы под ваши задачи
+					.small Подключим к&nbsp;облаку ваше оборудование, 
+						br
+						| переделаем интерфейс и&nbsp;дизайн системы
+
+			.text-center.d-md-none( class=" wow bounceIn" data-wow-offset="80" data-wow-duration=".6s")
+				+e.A.btn.btn.btn-primary.px-5(href="#" data-toggle="modal" data-target="#modal-win" data-title="Заполните форму для&nbsp;скачивания " data-order="Заполните форму для скачивания "   data-btn="Отправить"  ): span Скачать презентацию
+	// end s-advantages
+
+
+mixin s-advantages-2()
+	// start s-advantages
+	+b.s-advantages--control-temp.section#s-advantages
+		.container
+			h2.text-center( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s") 
+				span Основные преимущества 
+					span.d-none.d-md-inline-block  нашей системы
+			.row
+				mixin item(i)
+					+e.col-wow--control-temp.col-xl-3.col-lg-4.col-sm-6( class=" wow fadeInLeft " data-wow-offset="80" data-wow-duration=".6s")&attributes(attributes)
+						+e.item--control-temp
+							.row
+								.col-sm-12.col-auto
+									+e.img-wrap--control-temp
+										img.res-i(src=`img/img-2/advantages-i-2-${i}.png`, alt="")
+								.col
+									block
+							//- .h6.strong= p
+							//- .small= sm
+					// .col-lg-4.col-sm-6
+
+				+item("1") 
+					.small Облачный сервис для 
+						br 
+						| контроля через интернет
+				+item("2" ) 
+					.small Датчики из Госреестра 
+						br 
+						| средств измерения
+
+				+item("3" ) 
+					.small Межповерочный 
+						br 
+						| интервал&nbsp;&mdash; 2&nbsp;года
+
+				+item("4" )
+					 
+					.small Хранение данных 
+						br 
+						| телеметрии до&nbsp;5&nbsp;лет
+				+item("5" )
+				 
+					.small Разделение доступа 
+						br 
+						| между арендаторами
+
+				+item("6" ) 
+				 
+					.small Работает через GSM, 
+						br 
+						| Wi-Fi, Ethernet
+
+				+item("7" ) 
+				 
+					.small Российское 
+						br 
+						| оборудование и&nbsp;ПО
+
+				+item("8" ) 
+					.small Бесплатная
+						br 
+						| доставка по&nbsp;РФ
+
+		 
+			.text-center( class=" wow bounceIn" data-wow-offset="80" data-wow-duration=".6s")
+				+e.A.btn--lg.btn.btn-lg.btn-primary.px-5(href="#" data-toggle="modal" data-target="#modal-win" data-title="Заполните форму для&nbsp;скачивания " data-order="Заполните форму для скачивания "   data-btn="Отправить"  ): span Получить презентацию 
+					span.d-none.d-md-inline системы
+	// end s-advantages
+
+mixin s-advantages-3()
+	// start s-advantages
+	+b.s-advantages--3.--control-temp.section#s-advantages
+		.container
+			h2.text-center( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s") 
+				span Система позволяет экономить
+			.row
+				mixin item(i)
+					+e.col-wow.col-lg-4.col-md-6( class=" wow fadeInLeft " data-wow-offset="80" data-wow-duration=".6s")&attributes(attributes)
+						+e.item--3.--control-temp.text-lg-left.text-center
+						
+							+e.img-wrap
+								img.res-i(src=`img/img-3/ec-${i}.png`, alt="")
+							block
+							//- .h6.strong= p
+							//- .small= sm
+					// .col-lg-4.col-sm-6
+
+				+item("1") 
+					.h6 Разогревайте дом к приезду
+					.small В&nbsp;остальное время поддерживайте минимально достаточную температуру
+				+item("2" ) 
+					.h6 Топите ночью по&nbsp;более дешевому тарифу
+					.small Днем тратьте электроэнергию  по&nbsp;минимуму
+
+				+item("3" ) 
+					.h6 Система подстраивается  под погоду на&nbsp;улице
+					.small Днем тратьте электроэнергию  по&nbsp;минимуму
+			
+	// end s-advantages
+

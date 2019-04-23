@@ -1,0 +1,29 @@
+mixin s-whom()
+	// start s-whom
+	+b.s-whom.section#s-whom.d-none.d-md-block
+		+e.after
+		+e.before
+			+e.before-inner
+		.container
+			h2( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".8s"): span Кому нужна система «Unimon»?
+			.row
+				mixin item(i,p, sm)
+					+e.col--wow.col-lg-4.col-sm-6( class=" wow fadeIn " data-wow-offset="80" data-wow-duration=".8s")
+						+e.item
+							+e.img-wrap
+								img.res-i(src=`img/whom-i-${i}.png`, alt="")
+							.h6.strong= p
+							.small= sm
+					// .col-lg-4.col-sm-6
+				+item("1","Бизнесу","Готовое и простое решение для мониторинга, и дистанционного управление оборудованием")
+				+item("2","Сервисным компаниям","Ускоренное реагирование, экономия на выездах для диагностики, дополнительный заработок")
+				+item("3","Интеграторам","Адаптируйте систему под свои задачи, взаимодействуя с облаком Unimon по API")
+				+item("4","Производителям датчиков","Простой способ удаленного контроля показаний и заработок на продаже контроллеров и облака")
+				+item("5","Производителям контроллеров","Получите готовое «облако» для своих контроллеров, сэкономьте миллионы на разработке и год времени")
+				+item("6","Простым людям","Контролируйте с телефона или ПК загородный дом, квартиру, бассейн, теплицу, аквариум, гараж и т.д.")
+			+e.foot( class=" wow bounceIn" data-wow-offset="80" data-wow-duration=".8s")
+
+				.row.d-none.d-lg-flex
+					.col-lg-6: +e.A.btn.btn.btn-lg.btn-primary.btn-block(href="#" data-toggle="modal" data-target="#modal-win" data-title="Получить оптовый прайс" data-order="Получить оптовый прайс"   data-btn="Заказать консультацию"  ): span Получить оптовый прайс
+					.col-lg-6: +e.A.btn.btn.btn-lg.btn-primary.btn-block(href="#" data-toggle="modal" data-target="#modal-win" data-title="Получить API системы" data-order="Получить API системы"   data-btn="Получить API"  ): span Получить API-системы
+	// end s-whom

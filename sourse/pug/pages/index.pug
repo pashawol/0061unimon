@@ -1,0 +1,41 @@
+extends layout/main.pug
+
+
+include ../blocks/s-work/_s-work.pug
+include ../blocks/s-schema/_s-schema.pug
+include ../blocks/s-gal/_s-gal.pug
+include ../blocks/s-api/_s-api.pug
+include ../blocks/s-type/_s-type.pug
+include ../blocks/s-control/_s-control.pug
+include ../blocks/s-mode/_s-mode.pug
+include ../blocks/s-prod/_s-prod.pug
+include ../blocks/s-advantages/_s-advantages.pug
+include ../blocks/s-tuning/_s-tuning.pug
+include ../blocks/s-whom/_s-whom.pug
+//- include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+
+block title
+	title ТЕМПЕРАТУРНОЕ КАРТИРОВАНИЕ  И ВАЛИДАЦИЯ
+
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+header-block()
+	//- +s-form()
+	+s-work
+	+s-schema
+	+s-gal
+	+s-api
+	+s-type
+	+s-control
+	+s-mode
+	+s-prod
+	+s-advantages
+	+s-tuning
+	+s-whom
+	+s-contact()
+	+footer()
+		
+		

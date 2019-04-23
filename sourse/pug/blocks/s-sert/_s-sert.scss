@@ -1,0 +1,204 @@
+.s-sert {
+	background-image: linear-gradient(to top, #1b9a9f 0%, $primary 100%);
+	color: #ffffff;
+
+	&__row {
+		flex-wrap: nowrap;
+		justify-content: center;
+	}
+
+	&__col:first-child {
+		margin-left: 0;
+	}
+	&__col:nth-child(1){
+		// z-index: 4;
+	}
+	&__img-wrap {
+		display: block;
+		transform-style: preserve-3d;
+	 
+		position: relative;
+		@include transform(rotate(-33deg) skew(30deg, 6.9deg));
+		transform-style: preserve-3d;
+		margin: 4px 2px 0 8px;
+		// padding: 3px 3px;
+		&::after{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 101.5%;
+			height: 90.5%;
+			@include mt;
+			background-color: rgba(27, 155, 159, 0.45);
+			opacity: 0;
+		}
+		@include media-breakpoint-up(md) { 
+			position: relative; 
+			left: 3px; 
+			width: 190px;
+			height: 300px;
+			img {
+				max-width: 213px;
+				max-height: 272px;
+			}
+		}
+		width: 190px *.6;
+		height: 300px *.6;
+		img {
+			max-width: 213px *.6;
+			max-height: 272px *.6;
+		}
+
+		text-align: center;
+		position: relative;
+		z-index: 2;
+		@include mt;
+		
+		// background-color: #ffffff;
+		// outline: 1px solid #0000;
+		// margin-top: 3px;
+
+		&:hover {
+			cursor: zoom-in;
+
+		}
+	}
+
+	&__img-wrap--rotate {
+		img {
+			@include transform(rotate(90deg) translate(14%, 21%));
+
+
+			@include media-breakpoint-up(md) { 
+				top: 4px;
+				position: relative;
+				max-width: 272px;
+				max-height: 213px;
+			} 
+			max-width: 272px * .6;
+			max-height: 213px * .6;
+				// max-width: none;  
+		}
+		&::after{
+			content: '';
+			position: absolute;
+			@include media-breakpoint-up(md) {
+				left: 1.2px;
+				top: .5px;
+				width: 99.9%;
+				height: 90.9%;
+			} 
+			top: -2px; 
+			// @include mt;
+			// background-color: rgba(27, 155, 159, 0.45);
+		}
+	}
+
+	&__col {
+		@include media-breakpoint-up(md) {
+
+			margin-left: -60px;
+		}
+		margin-left: -30px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			background-image: url(../img/img-2/ramka-active.png);
+			background-image: url(../img/img-2/ramka.png);
+			// z-index: 1;
+			background-repeat: no-repeat;
+			background-size: contain;
+			pointer-events: none;
+			z-index: 2;
+			@include mt;
+			@include media-breakpoint-up(md) {
+				
+				
+				left: -84%;
+				top: 8%;
+				width: 265%;
+				height: 109%;
+			}
+			left: -85%;
+			top: 8%;
+			width: 269%;
+			height: 109%;
+		}
+		&:hover{
+			&::before{
+				
+				background-image: url(../img/img-2/ramka-active.png);
+			}
+		}
+	}
+	&__col:hover &__img-wrap{
+		// background-color: rgba(27, 155, 159, 0.45);
+		&::after{
+			opacity: 1;
+		}
+	}
+	
+	//
+	h2 {
+		@include media-breakpoint-up(md) {
+
+			margin-bottom: 30px;
+		}
+		margin-bottom: 10px;
+	}
+
+	&__sub-title {
+		padding-bottom: rem(30);
+	}
+
+	@include media-breakpoint-up(xl) {
+		padding-top: 40px;
+		padding-bottom: 250px;
+	}
+
+
+
+	@include media-breakpoint-up(lg) {
+
+		padding-bottom: 250px;
+	}
+
+	@include media-breakpoint-up(md) {
+		// padding-bottom: 250px;
+		padding-bottom: 70px;
+
+	}
+
+	@include media-breakpoint-up(sm) {}
+
+	@include media-breakpoint-up(xs) {}
+
+	//
+	@include media-breakpoint-between(md, xl) {}
+
+
+	//
+	@include media-breakpoint-only(xs) {}
+
+	@include media-breakpoint-only(sm) {}
+
+	@include media-breakpoint-only(md) {}
+
+	@include media-breakpoint-only(lg) {}
+
+	@include media-breakpoint-only(xl) {}
+
+	//
+	@include media-breakpoint-down(xl) {}
+
+	@include media-breakpoint-down(lg) {}
+
+	@include media-breakpoint-down(md) {}
+
+	@include media-breakpoint-down(sm) {}
+
+	@include media-breakpoint-down(xs) {}
+
+}

@@ -1,0 +1,31 @@
+mixin s-logo()
+	// start s-logo
+	+b.s-logo#s-logo
+		+e.head
+			.container( class=" wow fadeInLeft " data-wow-offset="120" data-wow-duration="1.5s")
+				h2.text-center: span Работает со всеми видами систем отопления
+				.row
+		+e.body( class=" wow fadeInLeft " data-wow-offset="120" data-wow-duration="1.5s")
+			.container
+				ul
+					li Газовые котлы
+					li Электро котлы
+					li Твердотопливные котлы
+					li Пеллетные котлы
+					li Конверторы
+					li Теплый пол
+					li ТЭНы
+					li Тепловые пушки
+				+e.row.row
+					- for (var x = 1; x < 16; x++)
+						+e.col.col-md-3.col-4
+							+e.item
+								img.res-i(src=`img/img-3/logo-${x}.png`, alt="")
+						// +e.col.col
+				.text-center( class=" wow bounceIn" data-wow-offset="80" data-wow-duration=".6s")
+					+e.A.btn--lg.btn-block.btn.btn-lg.btn-primary.px-5(href="#" data-toggle="modal" data-target="#modal-win-big" data-title="Получить схему подключения к&nbsp;котлу" data-order="Получить схему подключения к котлу"   data-btn="Запросить схему"  ): span Получить схему  подключения
+	// end s-logo
+
+
+	
+//- Заголовок формы "", поля Как Вас зовут?, Телефон, Email, Котел (текстовое однострочное). Кнопка в форме "Запросить схему"

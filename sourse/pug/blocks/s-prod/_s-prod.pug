@@ -1,0 +1,229 @@
+mixin s-prod()
+	// start s-prod
+	+b.s-prod.section#s-prod
+		.container
+			h2.text-center( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s"): span Примеры интегрированных контроллеров
+			+e.before( class=" wow zoomInUp " data-wow-offset="80" data-wow-duration=".6s")
+			.row
+				mixin prod(i,t, pr)
+					+e.col--wow.col-sm-6( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")&attributes(attributes)
+						+e.item.h-100
+							+e.item-before
+							.row.align-items-center.justify-content-center
+								.col-lg-auto.col-md-5
+									+e.img-wrap.justify-content-center
+										+e.img-wrap-inner: img.res-i(src=`img/prod-${i}.png`, alt="")
+								.col-lg.col-md-7
+									+e.title.h2.strong.text-sm-left.text-center= t
+									
+									//- .small.d-none.d-sm-block= p
+									block
+									
+									.h4.strong.text-sm-left.text-center= pr
+									div.d-none.d-sm-block: +e.A.more.small.tdu.text-white(href="#") Подробнее
+							//- .small.d-sm-none= p
+					// +e.col.col-md-6
+				+prod("1","UniBox","4 000  ₽ ")
+					.small Простой и&nbsp;дешевый контроллер, для&nbsp;распределенных объектов
+				+prod("2","WirenBoard","от 18 000  ₽")
+					.small Универсальный промышленный Linux-контроллер
+
+				+prod("3","Аура","9 800  ₽ ")
+					.small Несложный контроллер, проводные и&nbsp;беспроводные модули
+
+				+prod("4","AJAX","8 000  ₽")
+					.small Современная беспроводная охранная системы
+
+				+prod("5","Bolid","12 000  ₽")
+					.small Модульная система от&nbsp;одного из&nbsp;лидеров рынка
+
+				+prod("6","Stemax","9 900  ₽")(class="d-none d-sm-block")
+					.small Охранно-пожарная проводная система
+			.h3.strong.text-center.d-none.d-md-block( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s") Список пополняется&nbsp;&mdash; мы&nbsp;постоянно работаем над интеграцией  новых систем в&nbsp;платформу Unimon
+			+e.foot( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+				.row.d-none.d-lg-flex
+					.col-lg-6: +e.A.btn.btn.btn-lg.btn-primary.btn-block(href="#" data-toggle="modal" data-target="#modal-win" data-title="Заказать разработку  драйвера" data-order="Заказать разработку  драйвера"   data-btn="Заказать разработку"  ) Заказать разработку драйвера
+					.col-lg-6: +e.A.btn.btn.btn-lg.btn-primary.btn-block(href="#" data-toggle="modal" data-target="#modal-win" data-title="Получить описание  МОТТ протокола" data-order="Получить описание  МОТТ протокола"   data-btn="Получить описание"  ): span  Получить описание MQTT-протокола
+			
+			div( class=" wow fadeIn " data-wow-offset="80" data-wow-duration=".6s"): +form-wrap()
+				+e.before
+				+e.after
+				.text-center
+					.d-none.d-md-block
+						+e.big-title.h3.strong.text-white Закажите бесплатную консультацию специалиста по&nbsp;выбору оптимального оборудования
+					.d-md-none
+						+e.big-title.h3.strong.text-white Консультация  по&nbsp;подбору решения
+				form
+					.row
+						.col-lg
+							.row.row-small
+								.col-md-6
+									+input("text","Как Вас зовут?")(class="form-wrap__input-icon ")
+										+e.SPAN.icon-wrap
+											+icon("user")
+								.col-md-6
+									+input("tel","Номер телефона")(class="form-wrap__input-icon ")
+										+e.SPAN.icon-wrap
+											+icon("tel")
+						.col-lg-auto
+							+e.BUTTON.btn.btn.btn-block.btn-primary(type="submit"  ): span Заказать консультацию
+				+polite('Заказать консультацию')
+
+	// end s-prod
+mixin s-prod-3()
+	// start s-prod
+	+b.s-prod--3.section#s-prod
+		+e.before.d-none.d-md-block( class=" wow zoomInUp " data-wow-offset="80" data-wow-duration=".6s")
+		.container
+			+e.top-block.form-wrap.d-lg-none.text-white
+				.h5.strong Пройдите тест для 
+					br
+					| подбора оборудования
+				.small Оптимального по цене и функционалу 
+					br
+					| именно для Вашей задачи
+				+e.A.btn.btn.btn-block.btn-primary(href="#"  ): span Подобрать оборудование
+				+e.foot-block
+					.row.small.text-left
+						.col-auto
+							img(src="img/img-3/vybor.png", alt="")
+						.col Каждому прошедшему тест 
+							br
+							span.text-primary датчик температуры в подарок!
+			// /+e.top-block.form-wrap.d-lg-none
+			h2.text-center( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s"): span Системы для контроля температуры
+			.row
+				mixin prod(i,t, pr)
+					+e.col--wow.col-sm-6( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")&attributes(attributes)
+						+e.item.h-100
+							+e.item-before
+							.row.align-items-center.justify-content-center
+								.col-lg-auto.col-md-5
+									+e.img-wrap.justify-content-center
+										+e.img-wrap-inner: img.res-i(src=`${i}.png`, alt="")
+								.col-lg.col-md-7
+									+e.title.h2.strong.text-sm-left.text-center= t
+									
+									//- .small.d-none.d-sm-block= p
+									block
+									
+									.h4.strong.text-sm-left.text-center= pr
+									div.d-none.d-sm-block: +e.A.more.small.tdu.text-white(href="#") Подробнее
+							//- .small.d-sm-none= p
+					// +e.col.col-md-6
+				+prod("img/prod-1","UniBox","4 000  ₽ ")
+					.small Простой и&nbsp;дешевый контроллер, для&nbsp;распределенных объектов
+
+				+prod("img/prod-3","Аура","9 800  ₽ ")
+					.small Несложный контроллер, проводные и&nbsp;беспроводные модули
+
+
+
+				+prod("img/img-3/prod-3-3","ZONT","9 900  ₽")
+					.small Может общаться с&nbsp;котлом  по&nbsp;&laquo;OpenTerm&raquo; и&nbsp;&laquo;E-Bus&raquo;
+
+				+prod("img/img-3/prod-3-4","Кситал","12 000  ₽")
+					.small Популярное решение для управления  отоплением по&nbsp;SMS
+
+				+prod("img/prod-2","WirenBoard","от 18 000  ₽")
+					.small Универсальный промышленный Linux-контроллер
+				+prod("img/img-3/prod-3-6","GSM-розетка","3 950  ₽")(class="d-none d-sm-block")
+					.small Самое простое и&nbsp;дешевое решение для контроля температуры по&nbsp;SMS
+		 
+			div( class=" wow fadeIn  d-none d-md-block" data-wow-offset="80" data-wow-duration=".6s"): +form-wrap()
+				+e.before
+				+e.after
+				.text-center
+					.d-none.d-md-block
+						+e.big-title.h3.strong.text-white Закажите бесплатную консультацию специалиста по&nbsp;выбору оптимального оборудования
+					.d-md-none
+						+e.big-title.h3.strong.text-white Консультация  по&nbsp;подбору решения
+				form
+					.row
+						.col-lg
+							.row.row-small
+								.col-md-6
+									+input("text","Как Вас зовут?")(class="form-wrap__input-icon ")
+										+e.SPAN.icon-wrap
+											+icon("user")
+								.col-md-6
+									+input("tel","Номер телефона")(class="form-wrap__input-icon ")
+										+e.SPAN.icon-wrap
+											+icon("tel")
+						.col-lg-auto
+							+e.BUTTON.btn.btn.btn-block.btn-primary(type="submit"  ): span Заказать консультацию
+				+polite('Заказать консультацию')
+
+	// end s-prod
+
+
+mixin s-prod-4()
+	// start s-prod
+	mixin prod(i,t )
+		+e.col--wow.col-xl-4.col-md-6( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")&attributes(attributes)
+			+e.item-small.h-100 
+				.row.align-items-center.justify-content-center
+					.col-auto
+						+e.img-wrap-small.justify-content-center
+							+e.img-wrap-inner: img.res-i(src=`img/prod-${i}.png`, alt="")
+					.col
+						+e.title-small= t 
+						.row
+							.col-auto
+								+e.price-sm 18 000 ₽ 
+							.col-auto
+							 
+								.basket-element
+									+e.A.btn-sm.btn-secondary(href="#"): span  В корзину
+				//- .small.d-sm-none= p
+		// +e.col.col-xl-4.col-md-6
+	+b.s-prod--4.section
+		.container
+			h2( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s"): span Датчики
+			.row
+				+prod("2","Универсальный промышленный Linux-контроллер")
+				+prod("2","Универсальный промышленный Linux-контроллер")
+				+prod("2","Универсальный промышленный Linux-контроллер")
+				+prod("2","Универсальный промышленный Linux-контроллер")
+				+prod("2","Универсальный промышленный Linux-контроллер")
+				+e.col.col
+					+e.block.text-center
+						.h6.strong Не нашли подходящий датчик?
+						+e.A.btn-block.btn.btn-primary(href="#" data-toggle="modal" data-target="#modal-win" data-title="Подбор оборудования" data-order="Подбор оборудования"   data-btn="Отправить заявку"  ): span Подбор оборудования
+					
+	
+	+b.s-prod--4.section
+		.container
+			h2( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s"): span Дополнительное оборудование 
+			.row
+				+prod("2","Универсальный промышленный Linux-контроллер")
+				+prod("2","Универсальный промышленный Linux-контроллер")
+				+prod("2","Универсальный промышленный Linux-контроллер")
+		 
+			div( class=" wow fadeIn " data-wow-offset="80" data-wow-duration=".6s"): +form-wrap()
+				+e.before
+				+e.after
+				.text-center
+					.d-none.d-md-block
+						+e.big-title.h3.strong.text-white Закажите бесплатную консультацию специалиста по&nbsp;выбору оптимального оборудования
+					.d-md-none
+						+e.big-title.h3.strong.text-white Консультация 
+							br.d-md-none
+							| по&nbsp;подбору решения
+				form
+					.row
+						.col-lg
+							.row.row-small
+								.col-md-6
+									+input("text","Как Вас зовут?")(class="form-wrap__input-icon ")
+										+e.SPAN.icon-wrap
+											+icon("user")
+								.col-md-6
+									+input("tel","Номер телефона")(class="form-wrap__input-icon ")
+										+e.SPAN.icon-wrap
+											+icon("tel")
+						.col-lg-auto
+							+e.BUTTON.btn.btn.btn-block.btn-primary(type="submit"  ): span Заказать консультацию
+				+polite('Заказать консультацию')
+
+	// end s-prod

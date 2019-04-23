@@ -1,0 +1,27 @@
+mixin s-where-control()
+	// start s-where-control
+	+b.s-where-control.section#s-where-control.d-none.d-md-block
+		.container
+			h2(class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s") Где необходим контроль и&nbsp;поддержание температурного режима?
+			.row(class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+				each val in ["Зона приемки лекарственных  препаратов","Зона основного хранения лекарственных препаратов","Зона экспедиции","Зона хранения лекарственных препаратов, требующих специальных условий","Зона карантинного хранения лекарственных препаратов.","Холодильники и холодильные камеры"]
+					+e.col.col-lg-4.col-sm-6
+						+e.item--sm= val
+					// /+e.col.col-4
+			
+	// end s-where-control
+
+mixin s-where-control-2()
+	// start s-where-control
+	+b.s-where-control.py-0
+		.container 
+			.row(class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+				each val in ["Описание технологии, по которой проводилось термокартирование.","Массив данных из регистраторов, для анализа и разрешения спорных ситуаций."," График температурной карты в 3D, где это применимо.","Рекомендация по местам установки термогигрометров системы мониторинга ","Анализ соответствия зон помещения заявленным для них характеристикам. ","Копии действующих сертификатов поверки на каждый  логгер","Графики относительно изменения температуры во времени 2D. "," Сводная таблица по точкам температурной карты с рассчитанными данными.","Схему помещения с пометками о размещении логгеров и высоте установки. ","Анализ соответствия зон помещения заявленным для них характеристикам."]
+					+e.col--lg.col-lg-6
+						+e.item--lg= val
+					// /+e.col.col-4
+			+e.img-foot.text-center
+				img.res-i.d-none.d-md-inline(src="img6/sert.png", alt="")
+				img.res-i.d-md-none(src="img6/sert-mob.png", alt="")
+	// end s-where-control
+

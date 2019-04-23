@@ -1,0 +1,43 @@
+mixin s-ready-kits()
+	// start s-ready-kits
+	+b.s-ready-kits.section#s-ready-kits.d-none.d-md-block
+		.container
+			h2( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s"): span Готовые комплекты
+			- for (var x = 0; x < 2; x++)
+				+e.group( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+					+e.group-body
+						+e.title GSM - система EctoControl. Версия «Температура». 
+						+e.title-gray Комплектация 1
+						p  Это одна из самых популярных комплектаций. Два датчика температуры необход имы для контроля температуры в 2 помещениях или контроля температуры в помещении и на трубе отопления (обратке). На каждый датчик можно установить мин. и макс. пределы и получать оповещения. Также в любой моментможно узнать текущее значение температур по SMS, в приложении или личном кабинете на сайте. К этому наборы вы можете докупить любые другие датчики и расширить функционал системы.
+						+e.row.row
+							mixin item(i, t)
+								+e.col.col-xl-2.col-lg-3.col-md-4
+									+e.item
+										+e.img-wrap
+											img.res-i(src=`img/img-4/complect-${i}.png`, alt="")
+										+e.caption= t
+										block
+								// +e.col.col-xl-2.col-lg-3.col-md-4
+							+item('1',"Центральный блок EctoControl v3.2")
+							- for (var x = 0; x < 5; x++)
+								+item('2',"Проводной датчик температуры")
+									+e.DIV.count 2 шт
+					+e.group-foot
+						.row
+							.col-auto
+								.ttu.small Стоимость комплектации 
+							.col-auto
+								+e.price 18 000 ₽ 
+							.col-auto
+								.buy-element
+									+e.A.btn-basket(href="#" data-toggle="modal" data-target="#modal-one-click" data-title="Купить" data-order="Купить"   data-btn="Купить"  ): span Купить
+								.basket-element
+									.row
+										.col-auto
+											+e.A.btn-basket(href="#"): span В корзину
+										.col-auto
+											+e.A.btn-one-click.btn-secondary(href="#" data-toggle="modal" data-target="#modal-one-click" data-title="Купить в один клик" data-order="Купить в один клик"   data-btn="Купить"  ): span Купить в один клик
+				// / +e.group
+			+e.A.btn-foot(href="#" data-toggle="modal" data-target="#modal-one-click" data-title="Собрать комплектацию" data-order="Собрать свою комплектацию"   data-btn=" Заказать сборку"  ): span Собрать свою комплектацию
+					
+	// end s-ready-kits

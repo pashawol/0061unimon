@@ -1,0 +1,36 @@
+mixin s-why-work()
+	// start s-why-work
+	+b.s-why-work.section#s-why-work
+		.container
+			h2( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s"): span Как можно работать
+			.row( class=" wow fadeInLeft " data-wow-offset="120" data-wow-duration="1.5s")
+				+e.col.col-md-4
+					+e.item--lg
+						+e.head--lg
+							+b.s-gal
+								+e.slider-big-wrap
+									+e.slider-big.s-why-work-slider-js.gal(data-slideout-ignore)
+										- for (var x = 0; x < 8; x++)
+											+e.slide--big.swiper-slide
+												+e.img-wrap--big.img-bg.d-block(href='img/slide.jpg')
+													img(src="#" data-lazy="img/slide.jpg", alt="")
+						+e.title--lg Через браузер
+				+e.col.col-md-4
+					+e.item--md
+						+e.head--md
+							+b.s-api.pb-0.gal
+								+e.phone-wrap(href='img/phone.png')
+									img(src="img/phone.png", alt="")
+				
+			 	
+						+e.title Через смартфон
+				+e.col.col-md-4
+					+e.item--sm
+						+e.head--sm
+							+b.s-api.pb-0.gal
+								+e.phone-wrap(href='img/img-4/phone.png')
+									img(src="img/img-4/phone.png", alt="")
+						+e.title--sm Через SMS
+				
+
+	// end s-why-work

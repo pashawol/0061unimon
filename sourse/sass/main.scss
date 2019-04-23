@@ -1,0 +1,76 @@
+$output-bourbon-deprecation-warnings: false;
+// @import "mq";
+@import "bourbon";
+@import "vars";
+@import "bootstrap/bootstrap";
+@import "../libs/animate";
+@import "fontawesome-pro-5.0.8/web-fonts-with-css/scss/fontawesome";
+@import "fontawesome-pro-5.0.8/web-fonts-with-css/scss/fa-brands";
+@import "fontawesome-pro-5.0.8/web-fonts-with-css/scss/fa-regular";
+@import "fontawesome-pro-5.0.8/web-fonts-with-css/scss/fa-solid";
+@import "fontawesome-pro-5.0.8/web-fonts-with-css/scss/fa-light";
+@import "../libs/magnificPopup/magnific-popup";
+// @import "../libs/swiper-4.2.0/dist/css/swiper";
+// @import "../libs/select2-4.0.6-rc.1/dist/css/select2.min";
+// @import "../libs/dropzone";
+// @import "../libs/gijgo-master/dist/combined/css/gijgo";
+// @import "../libs/gijgo-master/dist/combined/css/demo.min";
+@import "../libs/slick/slick1";
+// @import "../libs/ion.rangeSlider-2.2.0/css/ion.rangeSlider";
+// @import "../ibs/Snap.js-develop/snap";
+// @import "../libs/ion.rangeSlider-2.2.0/css/ion.rangeSlider.skinHTML5";
+
+@import "base";
+
+@import "../../public/img/svg/_sprite";
+
+@import "../pug/blocks/mixin-wrap/mixin-wrap";
+@import "../pug/blocks/mixin-wrap/form-wrap";
+@import "../pug/blocks/header/_header";
+@import "../pug/blocks/top-line/top-line";
+@import "../pug/blocks/top-nav/top-nav";
+
+
+@import "../pug/blocks/header-block/_header-block";
+@import "../pug/blocks/s-content/_s-content";
+@import "../pug/blocks/s-contact/_s-contact";
+
+@import "../pug/blocks/s-work/_s-work";
+@import "../pug/blocks/s-schema/_s-schema";
+@import "../pug/blocks/s-gal/_s-gal";
+@import "../pug/blocks/s-api/_s-api";
+@import "../pug/blocks/s-type/_s-type";
+@import "../pug/blocks/s-control/_s-control";
+@import "../pug/blocks/s-mode/_s-mode";
+@import "../pug/blocks/s-prod/_s-prod";
+@import "../pug/blocks/s-advantages/_s-advantages";
+@import "../pug/blocks/s-tuning/_s-tuning";
+@import "../pug/blocks/s-whom/_s-whom";
+@import "../pug/blocks/s-sert/_s-sert";
+
+@import "../pug/blocks/s-form/s-form";
+@import "../pug/blocks/footer/footer";
+@import "../pug/blocks/modal/modal";
+
+
+@import "../pug/blocks/s-price/_s-price";
+@import "../pug/blocks/s-system/_s-system";
+@import "../pug/blocks/s-patner/_s-patner";
+
+@import "../pug/blocks/s-communications/_s-communications";
+@import "../pug/blocks/s-save/_s-save";
+@import "../pug/blocks/s-economy/_s-economy";
+@import "../pug/blocks/s-logo/_s-logo";
+
+@import "../pug/blocks/s-char/_s-char";
+@import "../pug/blocks/s-about/_s-about";
+@import "../pug/blocks/s-doc/_s-doc";
+@import "../pug/blocks/s-specifications/_s-specifications";
+@import "../pug/blocks/s-ready-kits/_s-ready-kits"; 
+@import "../pug/blocks/s-why-work/_s-why-work"; 
+@import "../pug/blocks/s-map/_s-map"; 
+@import "../pug/blocks/s-where-control/_s-where-control"; 
+@import "../pug/blocks/s-why-we/_s-why-we"; 
+@import "../pug/blocks/s-other-differents/_s-other-differents"; 
+
+@import "media";// Всегда в конце

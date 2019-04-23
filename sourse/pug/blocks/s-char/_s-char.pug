@@ -1,0 +1,63 @@
+mixin s-char()
+	// start s-char
+	+b.s-char.section#s-char
+		.container
+			.row
+				mixin item(t)
+					+e.col.col-xl-4.col-md-6
+						+e.item
+							+e.title= t
+							table
+								block
+					// +e.col.col-xl-4.col-md-6
+				+item("Передача данных")
+					tr
+						td: span GSM 
+						td: .text-success есть
+					
+					tr
+						td: span WiFi 
+						td: .text-success опционально
+					
+					tr
+						td: span Ethernet 
+						td: .text-danger  нет
+					
+				+item("Радиосеть")
+					tr
+						td: span Протоко
+						td  стандартный
+					
+					tr
+						td: span Частота  
+						td  433 MHz
+					
+					tr
+						td: span Датчики 
+						td до 50 шт — температуры, влажности, движения, дыма
+				+item("Проводные интерфейсы")
+					tr
+						td: span Входы сухой контакт  
+						td: .text-success есть
+					
+					tr
+						td: span Выходы сухой контакт  
+						td: .text-success  опционально
+					
+					tr
+						td: span 1-wire (для DS18b20)
+						td: .text-danger  нет
+					
+					tr
+						td: span RS-485 (Modbus RTU) 
+						td: .text-success 2 шт
+					
+					tr
+						td: span Аналоговые входы 4-20 мА 
+						td: .text-success есть
+					
+					tr
+						td: span Аналоговые входы 0-10 В 
+						td: .text-success есть
+					
+	// end s-char

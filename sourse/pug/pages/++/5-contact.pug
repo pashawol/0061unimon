@@ -1,0 +1,41 @@
+extends layout/main.pug
+
+
+include ../blocks/s-work/_s-work.pug
+include ../blocks/s-schema/_s-schema.pug
+include ../blocks/s-gal/_s-gal.pug
+include ../blocks/s-api/_s-api.pug
+include ../blocks/s-type/_s-type.pug
+include ../blocks/s-control/_s-control.pug
+include ../blocks/s-mode/_s-mode.pug
+include ../blocks/s-prod/_s-prod.pug
+include ../blocks/s-advantages/_s-advantages.pug
+include ../blocks/s-tuning/_s-tuning.pug
+include ../blocks/s-whom/_s-whom.pug
+//- include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+
+include ../blocks/s-char/_s-char.pug
+include ../blocks/s-about/_s-about.pug
+include ../blocks/s-doc/_s-doc.pug
+include ../blocks/s-specifications/_s-specifications.pug
+include ../blocks/s-ready-kits/_s-ready-kits.pug 
+include ../blocks/s-why-work/_s-why-work.pug 
+include ../blocks/s-map/_s-map.pug 
+
+
+block title
+	title контакты
+
+block pagecontent
+	.block-without-basket
+		+mob-mnu()
+		+header()
+			+top-nav-page()
+			//- .header-block
+			 
+		+s-contact-5()
+		+s-map()
+		+footer()
+			
+		

@@ -1,0 +1,131 @@
+include ../mixin-wrap/form-wrap.pug
+include ../mixin-wrap/mixin-wrap.pug
+mixin modal() 
+ 
+	#modal-win.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modal-win', aria-hidden='true')
+		
+		div( class="   modal-dialog  modal-dialog-centered  " role='document') 
+			+form-wrap()(class=" modal-content modal-win ")
+				button.close.mfp-close(type='button', data-dismiss='modal', aria-label='Close')  ×
+				
+				.h3.strong.text-center.text-white.pb-3
+				form 
+					+input("hidden"," a")(class="order ")
+					+input("text","Как Вас зовут?")(class="form-wrap__input-icon ")
+						+e.SPAN.icon-wrap
+							+icon("user") 
+					+input("tel","Номер телефона")(class="form-wrap__input-icon ")
+						+e.SPAN.icon-wrap
+							+icon("tel")
+					+e.BUTTON.btn.btn.btn-block.btn-primary(type="submit" value="" )
+				+polite()
+	
+ 
+	
+ 
+
+	#thanks.modal.fade(tabindex='-1', role='dialog', aria-labelledby='thanks', aria-hidden='true')
+		div( class=" ttext-center  modal-dialog  modal-dialog-centered  " role='document') 
+			+form-wrap()(class=" modal-content modal-win text-center ")
+				button.close.mfp-close(type='button', data-dismiss='modal', aria-label='Close')  ×
+				.h3.strong.text-center.text-white.pb-3 Форма успешно  отправлена
+				br
+				p Спасибо за&nbsp;обращение! Наши специалисты свяжуться  с&nbsp;Вами в&nbsp;ближайшее время
+				br 
+	#modal-win-big.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modal-win', aria-hidden='true')
+		
+		div( class="   modal-dialog  modal-dialog-centered  " role='document') 
+			+form-wrap()(class=" modal-content modal-win ")
+				button.close.mfp-close(type='button', data-dismiss='modal', aria-label='Close')  ×
+				
+				.h3.strong.text-center.text-white.pb-3
+				form 
+					+input("hidden"," a")(class="order ")
+					+input("text","Как Вас зовут?")(class="form-wrap__input-icon ")
+						+e.SPAN.icon-wrap
+							+icon("user") 
+					+input("tel","Номер телефона")(class="form-wrap__input-icon ")
+						+e.SPAN.icon-wrap
+							+icon("tel")
+					
+					+input("email","Email")(class="form-wrap__input-icon ")
+						+e.SPAN.icon-wrap
+							+icon("email")
+					+ta("Описание")
+					+e.BUTTON.btn.btn.btn-block.btn-primary(type="submit" value="" )
+				+polite()
+	
+	#modal-win-deliv.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modal-win', aria-hidden='true')
+		
+		div( class="   modal-dialog  modal-dialog-centered  " role='document') 
+			+form-wrap()(class=" modal-content modal-win ")
+				button.close.mfp-close(type='button', data-dismiss='modal', aria-label='Close')  ×
+				
+				.h3.strong.text-center.text-white.pb-3
+				form 
+					+input("hidden"," a")(class="order ")
+					+input("text","Как Вас зовут?")(class="form-wrap__input-icon ")
+						+e.SPAN.icon-wrap
+							+icon("user") 
+					+input("tel","Номер телефона")(class="form-wrap__input-icon ")
+						+e.SPAN.icon-wrap
+							+icon("tel")
+					//- +ta("Описание")
+					
+					//- +input("email","Email")(class="form-wrap__input-icon ")
+					//- 	+e.SPAN.icon-wrap
+					//- 		+icon("tel")
+					+ta("Куда доставка")(class="form-wrap__input-icon ")
+						+e.SPAN.icon-wrap
+							+icon("map")
+					+e.BUTTON.btn.btn.btn-block.btn-primary(type="submit" value="" )
+				+polite()
+	
+	#modal-win-price.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modal-win', aria-hidden='true')
+		
+		div( class="   modal-dialog  modal-dialog-centered  " role='document') 
+			+form-wrap()(class=" modal-content modal-win ")
+				button.close.mfp-close(type='button', data-dismiss='modal', aria-label='Close')  ×
+				
+				.h3.strong.text-center.text-white.pb-3
+				form 
+					+input("hidden"," a")(class="order ")
+					+input("text","Как Вас зовут?")(class="form-wrap__input-icon ")
+						+e.SPAN.icon-wrap
+							+icon("user") 
+					+input("tel","Номер телефона")(class="form-wrap__input-icon ")
+						+e.SPAN.icon-wrap
+							+icon("tel")
+					
+					//- +input("email","Email")(class="form-wrap__input-icon ")
+					//- 	+e.SPAN.icon-wrap
+					//- 		+icon("tel")
+					+ta("Населенный пункт")(class="form-wrap__input-icon ")
+						+e.SPAN.icon-wrap
+							+icon("map")
+					+e.BUTTON.btn.btn.btn-block.btn-primary(type="submit" value="" )
+				+polite()
+	#modal-one-click.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modal-one-click', aria-hidden='true')
+		
+		div( class="   modal-dialog  modal-dialog-centered  " role='document') 
+			+form-wrap()(class=" modal-content modal-win ")
+				button.close.mfp-close(type='button', data-dismiss='modal', aria-label='Close')  ×
+				
+				.h3.strong.text-center.text-white.pb-3
+				form 
+					+input("hidden"," a")(class="order ")
+					+input("text","Как Вас зовут?")(class="form-wrap__input-icon ")
+						+e.SPAN.icon-wrap
+							+icon("user") 
+					+input("tel","Номер телефона")(class="form-wrap__input-icon ")
+						+e.SPAN.icon-wrap
+							+icon("tel")
+					
+					+input("email","Email")(class="form-wrap__input-icon ")
+						+e.SPAN.icon-wrap
+							+icon("mail")
+					
+					+e.BUTTON.btn.btn.btn-block.btn-primary(type="submit" value="" )
+				+polite()
+
+	// modal

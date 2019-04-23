@@ -1,0 +1,23 @@
+mixin s-save()
+	// start s-save
+	+b.s-save.section#s-save.d-none.d-lg-block
+		.container
+			h2( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s"): span Система спасает от аварий и проблем
+			.row
+				mixin item(i,t)
+					+e.item= t
+						img(src=`img/img-3/save-${i}.png`, alt="alt")
+					// +e.item
+				.col-auto
+					+item("1","Отключится электричество ")
+					+item("2","Замерзнет редуктор газа")
+					+item("3","Снизится давление")
+					+item("4","Проблемы с вытяжкой")
+					+item("5","Забутанивание газгольдера")
+					+item("6","Поломка котла")
+				.col-auto
+					+item("7","Остановится котел")
+					+item("8","Дом промерзнет")
+					+item("9","Лопнут радиаторы и трубы")
+					+item("10","Затопит дом")
+	// end s-save

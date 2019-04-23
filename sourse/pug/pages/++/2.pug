@@ -1,0 +1,49 @@
+extends layout/main.pug
+
+
+include ../blocks/s-work/_s-work.pug
+include ../blocks/s-schema/_s-schema.pug
+include ../blocks/s-gal/_s-gal.pug
+include ../blocks/s-api/_s-api.pug
+include ../blocks/s-type/_s-type.pug
+include ../blocks/s-control/_s-control.pug
+include ../blocks/s-mode/_s-mode.pug
+include ../blocks/s-prod/_s-prod.pug
+include ../blocks/s-advantages/_s-advantages.pug
+include ../blocks/s-tuning/_s-tuning.pug
+include ../blocks/s-whom/_s-whom.pug
+//- include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+
+include ../blocks/s-price/_s-price.pug
+include ../blocks/s-system/_s-system.pug
+include ../blocks/s-sert/_s-sert.pug
+
+block title
+	title unimon 2
+
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+header-block-control-temp()
+	+s-form()
+
+	+s-schema--2
+	+s-advantages-2()
+	+s-price
+	+s-gal
+	+s-api-2
+	+s-work-2
+	+s-system
+
+	//- +s-control
+	//- +s-mode
+	//- +s-prod
+	//- +s-tuning
+	//- +s-whom
+	+s-sert()
+	+s-contact-2()
+	+footer()
+		
+		

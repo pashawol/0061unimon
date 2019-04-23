@@ -1,0 +1,184 @@
+mixin s-work()
+	// start s-work
+	+b.s-work.section#s-work
+		+e.before( class=" wow fadeInLeft " data-wow-offset="120" data-wow-duration=".8s")
+		.container
+			.d-none.d-md-block
+				h2(class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".8s"): span Как мы работаем
+				.row
+					mixin item(t,p)
+						+e.col.col-xl-auto.col-md-6( class=" wow bounceInLeft " data-wow-offset="80" data-wow-duration=".8s")
+							+e.item
+								+e.item-before
+								block
+						// .col-xl-auto.col-md-6
+					+item("Подберём оптимальное оборудование","Минимальное по цене, но закрывающие все ваши задачи")
+						.h6.strong Подберём оптимальное оборудование
+						.small Минимальное по&nbsp;цене, но&nbsp;закрывающие 
+							br
+							| все ваши задачи
+
+					+item("Сами все купим, соберем, настроим, подключим","Вы получаете систему, которая уже работает «из коробки», достаточно включить и залогиниться в личный кабинет")
+						.h6.strong Сами все купим, соберем, настроим, подключим
+						.small Вы&nbsp;получаете систему, которая уже работает &laquo;из&nbsp;коробки&raquo;, 
+							br 
+							| достаточно включить и&nbsp;залогиниться в&nbsp;личный кабинет
+
+					+item("Смонтируем и запустим систему на объекте","Либо поручите монтаж по нашей подробной инструкции своим сотрудникам или региональному дистрибутору.")
+						.h6.strong Смонтируем и&nbsp;запустим систему на&nbsp;объекте
+						.small Либо поручите монтаж по&nbsp;нашей подробной инструкции 
+							br 
+							| своим сотрудникам или региональному дистрибутору.
+
+					+item("Техподдержка","После запуска системы осуществляем поддержку, обслуживание, проверку датчиков и обновление системы")
+						.h6.strong Техподдержка
+						.small После запуска системы осуществляем поддержку, обслуживание, 
+							br 
+							| проверку датчиков и&nbsp;обновление системы
+			#form-wrap(class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".8s")
+				+form-wrap()
+					+e.before
+					+e.after
+					.text-center
+						.d-none.d-md-block
+							+e.big-title.h3.strong.text-white Заполните форму и&nbsp;мы&nbsp;бесплатно подберем 3&nbsp;варианта решения
+							+e.sub-title.text-white Оптимальные по цене и функционалу именно для Вашей задачи
+						+e.big-title.h3.strong.text-white.d-md-none Бесплатный подбор оборудования
+					form
+						.row
+							.col-lg-6.d-none.d-md-block
+								+input("text","Как Вас зовут?")(class="form-wrap__input-icon ")
+									+e.SPAN.icon-wrap
+										+icon("user")
+							
+							.col-lg-6.order-lg-0.order-1
+								+input("email","Электронная почта")(class="form-wrap__input-icon ")
+									+e.SPAN.icon-wrap
+										+icon("mail")
+							
+							.col-lg-6
+								+input("tel","Номер телефона")(class="form-wrap__input-icon ")
+									+e.SPAN.icon-wrap
+										+icon("tel")
+							
+							.col-lg-6.d-none.d-md-block
+								+input("text","Где находится объект")(class="form-wrap__input-icon ")
+									+e.SPAN.icon-wrap
+										+icon("map")
+							.col-12.order-md-0.order-first
+								+ta("Опишите Вашу задачу")
+						.row.align-items-center
+							.col-lg-6.order-lg-0.order-last
+								+e.BUTTON.btn.btn.btn-lg.btn-block.btn-primary(type="submit"  )
+									span.d-none.d-md-block Бесплатный подбор решения
+									span.d-md-none Отправить заявку
+							.col-lg-6.text-white.d-none.d-md-block
+								.h6 Нужен ли монтаж
+								.row
+									.col-auto.pt-1
+										+in-rad("installation")
+											+e.SPAN.small Да
+									
+									.col-auto.pt-1
+										+in-rad("installation")
+											+e.SPAN.small Нет
+									
+									.col-auto.pt-1
+										+in-rad("installation")
+											+e.SPAN.small Не решил
+					+b.polite Нажимая кнопку «
+						span.d-none.d-md-inline Бесплатный подбор решения
+						span.d-md-none Отправить заявку
+						|», Вы соглашаетесь на 
+						|
+						+e.A.link.tdu.d-inline-block(href="Soglasie.pdf" target="_blank")  обработку персональных данных
+				
+	// end s-work
+mixin s-work-2()
+	// start s-work
+	+b.s-work-2.section#s-work
+		+e.before( class=" wow fadeInLeft " data-wow-offset="120" data-wow-duration=".8s")
+		.container
+			
+			h2.text-center(class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".8s"): span Как мы работаем
+			.row
+				mixin item(i)
+					+e.col.col-lg-auto.col-sm-6.tex-center( class=" wow bounceInLeft " data-wow-offset="80" data-wow-duration=".8s")
+						+e.item
+							+e.img-wrap
+								+e.img-wrap-inner
+									img.res-i(src=`img/img-2/work-i-2-${i}.png`, alt="")
+							block
+					// +e.col.col-xl-4.col-md-6
+				+item("1")
+					.h6 Собираем систему
+				+item("2")
+					.h6 Настраиваем ее&nbsp;под вас
+				+item("3")
+					.h6 Проходим поверку
+				+item("4")
+					.h6 Бесплатно доставляем по&nbsp;России
+			+e.block.text-center( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+				.h2.strong Результат
+				.h5.strong Система работает &laquo;из&nbsp;коробки&raquo; 
+					br
+					| после включения питания
+				p Остается только закрепить датчики 
+					br
+					| и&nbsp;проложить провода к&nbsp;ним  
+					br
+					| (
+					span.d-none.d-md-inline до&nbsp;200&nbsp;км от&nbsp;Москвы 
+					| можем помочь и&nbsp;с&nbsp;этим)
+				+e.A.btn.btn.btn-lg.btn-secondary.btn-block.strong(href="#" data-toggle="modal" data-target="#modal-win" data-title="Скачать инструкцию по монтажу" data-order="Скачать инструкцию по монтажу"   data-btn="Скачать"  )
+					span.d-none.d-sm-block Скачать инструкцию по монтажу
+					span.d-sm-none Инструкция по монтажу
+	// end s-work
+mixin s-work-3()
+	// start s-work
+	+b.s-work-3.section#s-work
+		+e.before-3( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+			+e.before-3-inner
+		.container
+			
+			h2.text-center(class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".8s"): span Как мы работаем
+
+			+e.inner
+				.row( class=" wow bounceInLeft " data-wow-offset="80" data-wow-duration=".8s")
+					mixin item(i)
+						+e.col.col-sm-6.tex-center&attributes(attributes)
+							+e.item
+								+e.img-wrap
+									+e.img-wrap-inner
+										img.res-i(src=`img/img-3/work-i-${i}.png`, alt="")
+								block
+						// +e.col.col-xl-4.col-md-6
+					+item("1")(class="col-lg-auto")
+						.h6 Подбираем оптимальный
+							br
+							| контроллер и датчики
+					+item("2")(class="col-lg-auto")
+						.h6 Настраиваем систему под&nbsp;Ваши задачи
+					+item("3")(class="col-lg-auto")
+						.h6 Доставка по РФ
+					+item("4")(class="col-lg-12 order-lg-last")
+						.h6 Монтаж системы &laquo;под ключ&raquo;
+					
+					+item("5")(class="col-lg-12 order-lg-first d-none d-sm-block")
+						.h6 Самовывоз в Москве
+					
+					+item("6")(class="col-lg-auto")
+						.h6 Техподдержка 
+							br
+							| и&nbsp;обновление
+				
+			+e.foot( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+				.row.d-none.d-lg-flex
+					.col-lg-6: +e.A.btn.btn.btn-lg.btn-primary.btn-block(href="#" data-toggle="modal" data-target="#modal-win-deliv" data-title="Запросить расчет стоимости доставки" data-order="Расчет стоимости доставки"   data-btn="Запросить расчёт"  ): span Рассчитать стоимость доставки
+					.col-lg-6: +e.A.btn.btn.btn-lg.btn-primary.btn-block(href="#" data-toggle="modal" data-target="#modal-win-price" data-title="Запросить расчет стоимости монтажа" data-order="Запросить расчет стоимости монтажа"   data-btn="Запросить расчёт"  ): span  Рассчитать стоимость монтажа
+
+
+ 
+//- Заголовок формы "Запросить расчет стоимости монтажа", поля Как Вас зовут?, Телефон, Email, Населенный пункт. Кнопка в форме "Запросить расчёт"
+
+	// end s-work

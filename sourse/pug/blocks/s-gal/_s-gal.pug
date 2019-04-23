@@ -1,0 +1,35 @@
+mixin s-gal()
+	// start s-gal
+	+b.s-gal.section.text-white#s-gal
+		.container
+			
+			h2.d-none.d-lg-block: span Удобный интерфейс системы
+			h2.strong.d-lg-none.text-center Простой интерфейс —  ничего лишнего
+			.row
+				+e.col-wow.col-lg-7( class=" wow fadeInLeft " data-wow-offset="120" data-wow-duration="1.5s")
+					+e.slider-big-wrap
+						+e.slider-big.slider-js.gal(data-slideout-ignore)
+							- for (var x = 0; x < 8; x++)
+								+e.slide--big.swiper-slide
+									+e.img-wrap--big.img-bg.d-block(href='img/slide.jpg')
+										img(src="#" data-lazy="img/slide.jpg", alt="alt")
+
+	
+				+e.col-wow.col-lg-5.order-lg-0.order-last( class=" wow fadeIRight " data-wow-offset="120" data-wow-duration="1.5s")
+					+e.text
+						.slider-text-js(data-slideout-ignore)
+							- for (var x = 0; x < 8; x++)
+								+e.slide
+									.d-none.d-lg-block
+										
+										.h3.strong Простой интерфейс —  ничего лишнего
+										p Вы сами можете выбрать, какие показатели и элементы управления Для основного экрана объекта возможно выбрать наиболее важные для Вас.
+						+e.A.btn.btn.btn-lg.btn-secondary.btn-block.strong(href="#" data-toggle="modal" data-target="#modal-win" data-title="Получить демо-доступ к системе" data-order="Получить демо-доступ к системе"   data-btn="Получить доступ"  ): span Получить демо-доступ к системе
+				.col-12( class=" wow fadeInUp " data-wow-offset="120" data-wow-duration="1.5s")
+					+e.slider-small(data-slideout-ignore)
+						- for (var x = 0; x < 3; x++)
+							+e.slide--small.swiper-slide
+								+e.img-wrap--small.img-bg
+									img(src="#" data-lazy="img/slide.jpg", alt="alt")
+				//- +arrow()
+	// end s-gal

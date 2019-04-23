@@ -1,0 +1,400 @@
+.s-map {
+	background-color: $gray;
+
+	// .container
+	&__img-block {
+		text-align: center;
+
+		// background-image: url(../img/head-img-2-mob.png);
+		@include media-breakpoint-up(lg) {
+
+			// position: absolute;
+
+			left: -10px;
+			margin-bottom: 0;
+
+			background-size: 100%;
+		}
+
+		@include media-breakpoint-up(sm) {
+			margin-bottom: -45px;
+			display: block;
+			width: 100%;
+			left: -30px;
+		}
+
+		position: relative;
+		display: inline-block;
+		background-position: center center;
+
+		@include media-breakpoint-down(xs) {}
+
+		top: 10px;
+
+		a {
+			position: absolute;
+
+			&:nth-child(1) {
+				@include media-breakpoint-up(lg) {
+					left: 5%;
+					width: 90%;
+					height: 70%;
+				}
+
+				@include media-breakpoint-up(md) {
+					left: 14%;
+					width: 73%;
+					height: 86%;
+				}
+
+				@include media-breakpoint-up(sm) {
+					left: 11%;
+					width: 79%;
+					height: 86%;
+				}
+
+				left: 9%;
+				top: 0;
+				width: 83%;
+				height: 69%;
+			}
+
+			&:nth-child(2) {
+				@include media-breakpoint-up(lg) {
+					right: 16%;
+					bottom: 18%;
+					width: 21%;
+					height: 55%;
+				}
+
+				@include media-breakpoint-up(md) {
+					right: 21%;
+					/* bottom: 41%; */
+					width: 18%;
+					height: 57%;
+				}
+
+				@include media-breakpoint-up(sm) {
+					right: 19%;
+					bottom: -13%;
+					width: 18%;
+					height: 80%;
+				}
+
+				right: 17%;
+				top: 29%;
+				width: 20%;
+				height: 51%;
+			}
+
+			&:nth-child(3) {
+				@include media-breakpoint-up(md) {
+					right: 34%;
+					top: 44%;
+					width: 16%;
+					height: 43%;
+				}
+
+				right: 36%;
+				top: 44%;
+				width: 13%;
+				height: 43%;
+			}
+
+		}
+	}
+
+
+	&__map-wrap {
+		margin-top: -30px;
+		display: inline-block;
+		position: relative;
+		@include media-breakpoint-up(xl){
+
+			margin-left: -20px;
+			margin-right: -60px;
+		}
+		margin-bottom: 40px;
+	}
+
+	.h5 {
+		@include media-breakpoint-up(xl) {
+
+			margin-left: 30px;
+		}
+		padding-bottom: 10px;
+		@include media-breakpoint-down(sm) {
+			font-size: 16px;
+			.small{
+				font-weight: inherit;
+				font-size: inherit;
+			}
+		}
+	}
+	.col-lg-7{
+		position: relative;
+		z-index: 2;
+	}
+	&__icon-wrap {
+		position: absolute;
+		background-image: url(../img/img-4/home.svg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		text-align: center;
+		display: none;
+		@include media-breakpoint-up(md) {
+			display: inline-flex;
+		}
+		&[role="button"]{
+			cursor: pointer;
+			outline: none !important;
+		}
+		&::after {
+			content: '';
+			z-index: -1;
+			box-shadow: 0 11px $h5-font-size 4px rgba(66, 66, 66, 0.35);
+			position: absolute;
+			width: 50%;
+			height: 50%;
+			@include a-cent;
+		}
+
+		&--sm {
+			@include media-breakpoint-up(md) {
+
+				width: 22px * 1;
+				height: 22px * 1;
+			}
+			width: 12px;
+			height: 12px;
+			top: 0;
+
+			&:nth-child(1) {
+				display: inline-flex;
+				@include media-breakpoint-up(md) {
+					top: 60%;
+					left: 14%; 
+				}
+				top: 82%;
+				left: 5%;
+			}
+
+			&:nth-child(2) {
+				display: inline-flex;
+				@include media-breakpoint-up(md) {
+
+					top: 46%;
+					left: 32%;
+				}
+				top: 41%;
+				left: 20%;
+			}
+
+			&:nth-child(3) {
+				display: inline-flex;
+				@include media-breakpoint-up(md) {
+
+					top: 79%;
+					left: 40%;
+				}
+				top: 69%;
+				left: 37%;
+			}
+
+			&:nth-child(4) {
+				display: inline-flex;
+				@include media-breakpoint-up(md) {
+
+					top: 61%;
+					left: 60%;
+				}
+				top: 86%;
+				left: 69%;
+			}
+
+			&:nth-child(5) {
+				display: inline-flex;
+				@include media-breakpoint-up(md) {
+
+					top: 36%;
+					left: 70%;
+				}
+				top: 42%;
+				left: 64%;
+			}
+			
+			&:nth-child(6) {
+				display: inline-flex;
+				@include media-breakpoint-up(md) {
+
+					top: 62%;
+					left: 71%;
+				}
+				top: 17%;
+				left: 83%;
+			}
+			
+			&:nth-child(7) {
+				top: 81%;
+				left: 70%;
+			}
+			
+			&:nth-child(8) {
+				top: 13%;
+				left: 86%;
+			}
+			
+			&:nth-child(9) {
+				top: 40%;
+				left: 95%;
+			} 
+			
+			&:nth-child(10) {
+				top: 85%;
+				left: 90%;
+			} 
+
+		}
+
+		&--lg {
+			bottom: 0;
+			img{
+				max-width: 85%;
+				max-height: 85%;
+			}
+			@include media-breakpoint-up(md) {
+
+				width: 52px;
+				height: 52px;
+				padding-top: 8px;
+			}
+			padding-top: 2px;
+			height: 32px;
+			width: 32px;
+			padding: 3px;
+			 
+			align-items: center;
+			justify-content: center;
+
+			&::before {
+				content: '';
+				@include media-breakpoint-up(md) {
+				width: 29px;
+				height: 28px;
+				top: -15px;
+				right: -12px;
+				}
+				top: -12px;
+				right: -8px;
+				width: 19px;
+				height: 19px;
+				background-size: contain;
+				background-image: url(../img/img-4/home-before.png);
+				position: absolute;
+				// bottom: 100%;
+			}
+			&:nth-child(1) {
+				display: inline-flex;
+				@include media-breakpoint-up(md) {
+
+					top: 71%;
+					left: 6%;
+				}
+				top: 63%;
+				left: 15%;
+				}
+			
+			&:nth-child(2) {
+				display: inline-flex;
+				@include media-breakpoint-up(md) {
+
+					top: 42%;
+					left: 16%;
+				}
+				top: 65%;
+				left: 46%;
+				}
+			
+			&:nth-child(3) {
+				display: inline-flex;
+				@include media-breakpoint-up(md) {
+
+					top: 64%;
+					left: 26%;
+				}
+				top: 52%;
+				left: 72%;
+				}
+			
+			&:nth-child(4) {
+				top: 51%;
+				left: 49%;
+			}
+			
+			&:nth-child(5) {
+				top: 77%;
+				left: 55%;
+			}
+			
+			&:nth-child(6) {
+				top: 45%;
+				left: 73%;
+			}
+			
+			&:nth-child(7) {
+				top: 62%;
+				left: 84%;
+			}
+
+
+
+			
+		}
+	}
+
+	&__right-block{
+		position: relative;
+		@include media-breakpoint-up(xl) {
+
+			right: -45px;
+			margin-top: 10px;
+		}
+	}
+	//
+	@include media-breakpoint-up(xl) {}
+
+	@include media-breakpoint-up(lg) {}
+
+	@include media-breakpoint-up(md) {}
+
+	@include media-breakpoint-up(sm) {}
+
+	@include media-breakpoint-up(xs) {}
+
+	//
+	@include media-breakpoint-between(md, xl) {}
+
+
+	//
+	@include media-breakpoint-only(xs) {}
+
+	@include media-breakpoint-only(sm) {}
+
+	@include media-breakpoint-only(md) {}
+
+	@include media-breakpoint-only(lg) {}
+
+	@include media-breakpoint-only(xl) {}
+
+	//
+	@include media-breakpoint-down(xl) {}
+
+	@include media-breakpoint-down(lg) {}
+
+	@include media-breakpoint-down(md) {}
+
+	@include media-breakpoint-down(sm) {}
+
+	@include media-breakpoint-down(xs) {}
+
+}

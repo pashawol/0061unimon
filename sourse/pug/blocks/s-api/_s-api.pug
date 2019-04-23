@@ -1,0 +1,83 @@
+mixin s-api()
+	// start s-api
+	+b.s-api.section#s-api
+		.container
+			h2.text-center( class=" wow fadeInUp " data-wow-offset="120" data-wow-duration="1.5s"): span Приложения для&nbsp;iOS&nbsp;и&nbsp;Android
+				
+			+e.inner
+				.row
+					.col-md-auto.text-center( class=" wow flipInX " data-wow-offset="120" data-wow-duration="1.5s")
+						+e.barcode.d-none.d-md-block
+							img(src="img/apl.jpg", alt="alt")
+						a(href="#", title="title")
+							img(src="img/btn-1.png", alt="alt")
+					.col.order-md-0.order-first.gal.text-md-left.text-center( class=" wow flipInX " data-wow-offset="120" data-wow-duration="1.5s")
+						+e.before
+							+e.before-inner
+						+e.phone-wrap(href='img/phone.png')
+							img(src="img/phone.png", alt="alt")
+					.col-md-auto.text-center( class=" wow flipInX " data-wow-offset="120" data-wow-duration="1.5s")
+						+e.barcode.d-none.d-md-block
+							img(src="img/apl.jpg", alt="alt")
+						a(href="#", title="title")
+							img(src="img/btn-2.png", alt="alt")
+				
+	// end s-api
+
+mixin s-api-2()
+	// start s-api
+	+b.s-api.section#s-api
+		.container
+			h2.text-center( class=" wow fadeInUp " data-wow-offset="120" data-wow-duration="1.5s"): span Приложения для&nbsp;iOS&nbsp;и&nbsp;Android
+				
+			+e.inner
+				.row
+					.col-md-auto.text-center( class=" wow flipInX " data-wow-offset="120" data-wow-duration="1.5s")
+						+e.barcode.d-none.d-md-block
+							img(src="img/apl.jpg", alt="alt")
+						a(href="#", title="title")
+							img(src="img/btn-1.png", alt="alt")
+					.col.order-md-0.order-first.gal.text-md-left.text-center( class=" wow flipInX " data-wow-offset="120" data-wow-duration="1.5s")
+						+e.before
+							+e.before-inner
+						+e.phone-wrap(href='img/phone.png')
+							img(src="img/phone.png", alt="alt")
+					.col-md-auto.text-center( class=" wow flipInX " data-wow-offset="120" data-wow-duration="1.5s")
+						+e.barcode.d-none.d-md-block
+							img(src="img/apl.jpg", alt="alt")
+						a(href="#", title="title")
+							img(src="img/btn-2.png", alt="alt")
+			div( class=" wow fadeIn " data-wow-offset="80" data-wow-duration=".6s"): +form-wrap()
+				+e.before
+				+e.after
+				.text-center
+					.d-none.d-md-block
+						+e.big-title.h3.strong.text-white Оставьте заявку на&nbsp;получение 
+							br
+							| демонстрационного комплекта
+					.d-md-none
+						+e.big-title.h3.strong.text-white Получите комплект для&nbsp;демонстрации возможностей
+				form
+					.row
+						.col-lg
+							.row.row-small
+								.col-md-6
+									+input("text","Как Вас зовут?")(class="form-wrap__input-icon ")
+										+e.SPAN.icon-wrap
+											+icon("user")
+								.col-md-6
+									+input("tel","Номер телефона")(class="form-wrap__input-icon ")
+										+e.SPAN.icon-wrap
+											+icon("tel")
+						.col-lg-auto
+							+e.BUTTON.btn.btn.btn-block.btn-primary(type="submit"  )
+								span.d-none.d-md-inline Оставить заявку
+								span.d-md-none Получить комплект
+				+b.polite Нажимая кнопку «
+					span.d-none.d-md-inline Оставить заявку
+					span.d-md-none Получить комплект
+					|», Вы соглашаетесь на 
+					|
+					+e.A.link.tdu.d-inline-block(href="Soglasie.pdf" target="_blank")  обработку персональных данных
+	// end s-api
+

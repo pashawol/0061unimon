@@ -1,0 +1,39 @@
+mixin s-price()
+	// start s-price
+	+b.s-price.section#s-price
+		.container
+			.row( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+				+e.col.col-lg-6
+					+e.item
+						+e.head
+							+e.title Датчики температуры  и&nbsp;влажности
+						+e.body
+							+e.body-head
+								+e.img-wrap
+									img.res-i(src="img/img-2/price-1.png", alt="")
+								ul
+									li Дальность до 600 метров
+									li Не требуют замены батарек
+									li Легко снимаются для поверки
+									li Миниатюрные — 55 * 10 *8 мм
+								.small.d-none.d-md-block К системе возможно поделючение других датчиков:  движения, открытия, дыма,затопления, наличия 220В и др.
+							.h3.strong.text-md-left.text-center от 1 900 руб.
+				// .col-lg-6
+				
+				+e.col.col-lg-6
+					+e.item
+						+e.head
+							+e.title Блок управления  «UniBox 646N»
+						+e.body
+							+e.body-head
+								+e.img-wrap
+									img.res-i(src="img/img-2/price-2.png", alt="")
+								ul
+									li Автономное питание 24 ч.
+									li Подключение до 60 датчиков
+									li Контроль обрыва связи с датчиком
+									li Фильтрует лишние тревоги при открытии дверей холодильников и разморозках 
+							.h3.strong.text-md-left.text-center от 19 000 руб.
+				// .col-lg-6
+
+	// end s-price

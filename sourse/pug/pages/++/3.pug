@@ -1,0 +1,72 @@
+extends layout/main.pug
+
+
+include ../blocks/s-work/_s-work.pug
+include ../blocks/s-schema/_s-schema.pug
+include ../blocks/s-gal/_s-gal.pug
+include ../blocks/s-api/_s-api.pug
+include ../blocks/s-type/_s-type.pug
+include ../blocks/s-control/_s-control.pug
+include ../blocks/s-mode/_s-mode.pug
+include ../blocks/s-prod/_s-prod.pug
+include ../blocks/s-advantages/_s-advantages.pug
+include ../blocks/s-tuning/_s-tuning.pug
+include ../blocks/s-whom/_s-whom.pug
+//- include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+
+include ../blocks/s-communications/_s-communications.pug
+include ../blocks/s-save/_s-save.pug
+include ../blocks/s-economy/_s-economy.pug
+include ../blocks/s-logo/_s-logo.pug
+
+block title
+	title unimon 3
+
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+header-block-3()
+	+s-form-3()
+	+s-schema-3
+
+	+s-communications
+	+s-prod-3
+	+s-type-3
+	+s-control
+		.d-md-none.py-3
+			+form-wrap() 
+				.text-center
+					+e.big-title.h3.strong.text-white Консультация специалиста  по&nbsp;подбору решения
+				form
+					.row
+						.col-lg
+							.row.row-small
+								.col-md-6
+									+input("text","Как Вас зовут?")(class="form-wrap__input-icon ")
+										+e.SPAN.icon-wrap
+											+icon("user")
+								.col-md-6
+									+input("tel","Номер телефона")(class="form-wrap__input-icon ")
+										+e.SPAN.icon-wrap
+											+icon("tel")
+						.col-lg-auto
+							+e.BUTTON.btn.btn.btn-block.btn-primary(type="submit"  ): span Заказать консультацию
+				+polite('Заказать консультацию')
+	+s-mode-3
+
+	+s-save
+	+s-advantages-3()
+	//- +s-economy
+	+s-gal
+	+s-api
+
+	+s-logo
+	+s-work-3
+	//- +s-tuning
+	//- +s-whom
+	+s-contact()
+	+footer()
+		
+		

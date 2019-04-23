@@ -1,0 +1,156 @@
+mixin s-type()
+	// start s-type
+	+b.s-type.section#s-type
+		+e.before( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+		.container
+			h2( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s"): span Какие датчики можно подключить
+			+e.sub-title.text-md-left.text-center.d-none.d-sm-block( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s") От&nbsp;дешевых бытовых до&nbsp;промышленных (из&nbsp;Госреестра средств измерений&nbsp;РФ с&nbsp;поверкой)
+				br
+				| Проводные (до&nbsp;1&nbsp;000&nbsp;м) и&nbsp;беспроводныe
+			
+			+e.sub-title.text-md-left.text-center.d-sm-none( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s") 
+				.semi От&nbsp;дешевых бытовых до&nbsp;промышленных 
+				| (из&nbsp;Госреестра СИ&nbsp;РФ с&nbsp;поверкой)
+				.semi  Проводные (до&nbsp;1&nbsp;000&nbsp;м) и&nbsp;беспроводныe
+			
+			+e.title-block.h4.strong.d-none.d-md-block( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s") Типы датчиков
+			mixin item(i,p)
+				+e.col-wow.col-lg-4.col-sm-6( class=" wow fadeInRight " data-wow-offset="80" data-wow-duration=".6s")
+					+e.item
+						.row
+							.col-auto
+								+e.img-wrap
+									img.res-i(src=`img/type-i-${i}.png`, alt="")
+							.col.h6.mb-0= p
+								br
+								block
+							
+
+				// .col-4
+			
+			mixin item2(i,p)
+				+e.col-wow.col-xl-auto.col-lg-4.col-sm-6( class=" wow fadeInRight " data-wow-offset="80" data-wow-duration=".6s")
+					+e.item
+						.row
+							.col-auto
+								+e.img-wrap
+									img.res-i(src=`img/type-i-${i}.png`, alt="")
+							.col.h6.mb-0= p
+								
+								block
+							
+
+				// .col-4
+			
+			+e.row.row
+				+item("1","Температуры")
+				+item("2","Наличия 220/380В")
+				+item("3","Уровня жидкости")
+				+item("4","Влажности воздуха и почвы")
+				+item("5","Освещенности")
+				+item("6","Протечки воды")
+				+item("7","Движения и открытия")
+				+item("8","Давления")
+				+item("9","Потока жидкости")
+				+item("10","Задымления и пламени")
+				+item("11","Счетчики")
+				+item("12","Концентрации газов")
+				+item("13","Напряжения и силы тока")
+				+item("14","Дальномеры")
+				+item("15","Хим. состава воды")
+
+			+e.title-block.h4.strong( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s") Другие датчики с интерфейсом
+			.row
+				+item2("16","Сухой контакт ")
+					br
+					span (замыкание/размыкание)
+				+item2("17","Аналоговые ")
+					br
+					span (4-20 мА, 0-10В и др.)
+				+item2("18","Цифровые. ")
+					br
+					span (RS-485/Modbus, 1-wire, i2c, SPI и др.)
+	// end s-type
+
+
+mixin s-type-3()
+	// start s-type
+	+b.s-type--3.section#s-type
+		+e.before-3( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+			+e.before-3-inner
+		.container
+			h2( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s"): span Какие датчики можно подключить
+			+e.sub-title.text-md-left.text-center.d-none.d-sm-block( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s") От&nbsp;дешевых бытовых до&nbsp;промышленных (из&nbsp;Госреестра средств измерений&nbsp;РФ с&nbsp;поверкой)
+				br
+				| Проводные (до&nbsp;1&nbsp;000&nbsp;м) и&nbsp;беспроводныe
+			
+			+e.sub-title.text-md-left.text-center.d-sm-none( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s") 
+				.semi От&nbsp;дешевых бытовых до&nbsp;промышленных 
+				| (из&nbsp;Госреестра СИ&nbsp;РФ с&nbsp;поверкой)
+				.semi  Проводные (до&nbsp;1&nbsp;000&nbsp;м) и&nbsp;беспроводныe
+			
+			+e.title-block.h4.strong.d-none.d-md-block( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s") Типы датчиков
+			mixin item(i,p)
+				+e.col-wow.col-lg-4.col-sm-6( class=" wow fadeInRight " data-wow-offset="80" data-wow-duration=".6s")
+					+e.item
+						.row
+							.col-auto
+								+e.img-wrap
+									img.res-i(src=`${i}.png`, alt="")
+							.col.h6.mb-0= p
+								br
+								block
+							
+
+				// .col-4
+			
+			mixin item2(i,p)
+				+e.col-wow.col-xl-auto.col-lg-4.col-sm-6( class=" wow fadeInRight " data-wow-offset="80" data-wow-duration=".6s")
+					+e.item
+						.row
+							.col-auto
+								+e.img-wrap
+									img.res-i(src=`${i}.png`, alt="")
+							.col.h6.mb-0= p
+								
+								block
+							
+
+				// .col-4
+			
+			.row
+				+item("img/type-i-1","Температуры")
+				+item("img/type-i-8","Давления")
+				+item("img/type-i-11","Счетчики")
+				+item("img/type-i-2","Наличия 220/380В")
+				//
+				+item("img/img-3/type-i-3-5","Движения")
+				
+				+item("img/img-3/type-i-3-6","Уровня жидкости")
+				+item("img/type-i-6","Протечки воды")
+				+item("img/img-3/type-i-3-8","Протечки воды")
+				+item("img/type-i-4","Влажности воздуха")
+				+item("img/img-3/type-i-3-9","Утечки газа")
+				+item("img/type-i-10","Задымления и пламени")
+				+item("img/type-i-13","Напряжения и силы тока")
+
+				//- +item("img/type-i-5","Освещенности")
+				//- +item("img/type-i-9","Потока жидкости")
+				//- +item("img/type-i-12","Концентрации газов")
+				//- +item("img/type-i-14","Дальномеры")
+				//- +item("img/type-i-15","Хим. состава воды")
+
+			//- +e.title-block.h4.strong( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s") Другие датчики с интерфейсом
+			//- .row
+			//- 	+item2("16","Сухой контакт ")
+			//- 		br
+			//- 		span (замыкание/размыкание)
+			//- 	+item2("17","Аналоговые ")
+			//- 		br
+			//- 		span (4-20 мА, 0-10В и др.)
+			//- 	+item2("18","Цифровые. ")
+			//- 		br
+			//- 		span (RS-485/Modbus, 1-wire, i2c, SPI и др.)
+	// end s-type
+
+

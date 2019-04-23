@@ -1,0 +1,35 @@
+mixin s-system()
+	// start s-system
+	+b.s-system.section#s-system
+		.container
+			h2.text-center( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+				span Система 
+					span.d-none.d-sm-inline мониторинга 
+					| основана 
+					br
+					| на оборудовании компании «Болид»
+			.row
+				mixin item()
+					+e.col.col-lg-4.col-md-6( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+						
+						block
+					// +e.col.col-lg-4.col-md-6
+				+item()
+					+e.item.text-center Компания &laquo;Болид&raquo; работает 
+						br
+						| с&nbsp;1991 года
+				+e.col.col-lg-4.order-lg-0.order-first( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+					+e.logo
+						img.res-i(src="img/img-2/system-img.png", alt="")
+				// +e.col.col-lg-4
+				+item()
+					+e.item.text-center Система менеджмента качества сертифицирована по&nbsp;ГОСТ Р&nbsp;ИСО 9001-2015
+				+item()
+					+e.item.text-center Системы компании 
+						br
+						|  установлены более чем на&nbsp;1&nbsp;000&nbsp;000 объектов России
+				+item()
+					+e.item.text-center 53&nbsp;награды за&nbsp;инновационые продукты получены&nbsp;на междунароных выставках
+				+item()
+					+e.item.text-center Над созданием новой техники трудятся более 100 инженеров&nbsp;и программистов
+	// end s-system

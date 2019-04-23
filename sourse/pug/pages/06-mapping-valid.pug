@@ -1,0 +1,269 @@
+extends layout/main.pug
+
+
+include ../blocks/s-work/_s-work.pug
+include ../blocks/s-schema/_s-schema.pug
+include ../blocks/s-gal/_s-gal.pug
+include ../blocks/s-api/_s-api.pug
+include ../blocks/s-type/_s-type.pug
+include ../blocks/s-control/_s-control.pug
+include ../blocks/s-mode/_s-mode.pug
+include ../blocks/s-prod/_s-prod.pug
+include ../blocks/s-advantages/_s-advantages.pug
+include ../blocks/s-tuning/_s-tuning.pug
+include ../blocks/s-whom/_s-whom.pug
+include ../blocks/s-where-control/_s-where-control.pug
+//- include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-why-we/_s-why-we.pug
+include ../blocks/s-other-differents/_s-other-differents.pug
+
+block title
+	title ТЕМПЕРАТУРНОЕ КАРТИРОВАНИЕ  И ВАЛИДАЦИЯ
+
+block pagecontent
+	+mob-mnu()
+	+b.header--6
+		+top-nav()
+		
+	+header-block-6
+	+b.s-content--top.pt-0
+		.container
+			h2.text-md-center.text-left( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s"): span Что такое картирование?
+			.row
+				.col-lg-6( class=" wow fadeInLeft " data-wow-offset="80" data-wow-duration=".6s")
+					+e.text-block
+						p 
+							strong.text-primary Картирование
+							| &nbsp;&mdash; документально подтвержденное измерение и&nbsp;анализ распределения температуры и&nbsp;относительной влажности на&nbsp;объекте. 
+
+						p Для его выполнения специальным образом располагают сертифицированные высокоточные логгеры температуры и&nbsp;влажности на&nbsp;срок до&nbsp;7&nbsp;дней. Далее на&nbsp;основе полученного массива данных готовится подробный отчет, удовлетворяющий требованиям ряда нормативных актов. Среди прочего в&nbsp;отчете дается заключение о&nbsp;количестве и&nbsp;местах установки стационарных датчиков системы мониторинга.
+				.col( class=" wow fadeInRight " data-wow-offset="80" data-wow-duration=".6s").d-none.d-md-block
+					+e.img-wrap
+						img.res-i(src="img6/what-img.jpg", alt="") 
+	
+	+b.s-content--2.section
+		.container
+			h2.text-md-center.text-left( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+				span.d-none.d-md-inline Картирование требуется и&nbsp;регламентируется на&nbsp;законодательном уровне!
+				span.d-md-none Требуется по закону
+			+e.text-block-white( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+				div
+					.h5 &laquo;Для обеспечения требуемых условий хранения лекарственных препаратов в&nbsp;помещениях, используемых для хранения лекарственных препаратов, производителями лекарственных препаратов и&nbsp;организациями оптовой торговли лекарственными препаратами осуществляется изучение распределения температуры (температурное картирование)&raquo;
+					p 
+						strong.text-primary Согласно Приказа Минздрава РФ&nbsp;от&nbsp;31.08.2016&nbsp;N 646н
+		+b.s-content--3.pb-0.section.d-none.d-md-block
+			div(class="s-type__before-3 wow fadeInUp   " data-wow-offset="80" data-wow-duration=".6s")
+				div(class="s-type__before-3-inner")
+			.container
+				div(class="s-prod__before wow zoomInUp " data-wow-offset="80" data-wow-duration=".6s")
+				+e.title-3( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s") Аналогичные требования содержат
+				each val, index in { "Санитарно-эпидемиологические требования СП 3.3.2.3332-16":"«Условия транспортирования и хранения иммунобиологических лекарственных препаратов»", "Рекомендации Всемирной организации здравоохранения":"Technical supplement to WHO Technical Report Series, No. 961, 2011, No. 992, 2015","Приказ Минпромторга №916 от 14.06.2013":"«Об утверждении Правил надлежащей производственной практики»","Стандарт GDP/GMP ":"(для дистрибьюторов/производителей медпрепаратов)","Решение Совета ЕЭК №80 от 03.11.2016 г.":"«Правила надлежащей дистрибьюторской практики в рамках ЕАЭС»", "ОФС 1.1.0010.15 «Хранение лекарственных средств»":"" } 
+					+e.group( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+						strong= index
+						+e.group-text= val
+	+b.s-content--3.--dark.section
+		.container
+			+e.H2.title-dark( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s") Что выявляет картирование?
+
+			+e.group.text-white( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s") Однородность распределения воздушных масс.
+
+			+e.group.text-white( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s") Зоны с&nbsp;наиболее благоприятными условиями для хранения препаратов.
+
+			+e.group.text-white( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s") Холодные и&nbsp;горячие зоны&nbsp;&mdash; места с&nbsp;ярко выраженными отклонениями температуры.
+
+			+e.group.text-white( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s") Зоны риска&nbsp;&mdash; места, где температура часто меняется из-за влияния внешних факторов
+
+			+e.group.text-white( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s") С&nbsp;помощью расчета среднекинетической температуры дать заключение о&nbsp;соответствии зон предъявляемым к&nbsp;ним требованиям по&nbsp;режиму хранения.
+
+			+e.group.text-white( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s") Документально обоснованное количество и&nbsp;места установки датчиков температуры и&nbsp;влажности для  
+				|  
+				| 
+				a(href="#") системы непрерывного мониторинга микроклимата
+	+s-where-control
+	+b.s-content--4.pb-0.section.d-none.d-md-block
+		.container 
+			+e.H2.title-4( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s") Когда необходимо проводить картирование?
+			+e.text-3( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s") 
+				span.fw-600 Первичное картирование
+				| &nbsp;&mdash; обязательный этап при получении фармацевтической лицензии, а&nbsp;также в&nbsp;других случаях при организации мест хранения лекарственных препаратов.
+			+e.title-sm( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")  	 Повторное картирование   должно производиться в&nbsp;случаях:
+			each val in ["Изменения мест или количества климатических установок.","Изменения или добавления мест хранения температурно-чувствительных товаров.","Внесения изменений в конструкцию помещения (например, перегородок или стен).","В зимний и летний периоды."]
+				.group-sm( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s").h6= val
+	+b.s-content--3.--dark.s-content--mobile-light.section
+		.container
+			div(class="s-type__before-3 wow fadeInUp   " data-wow-offset="80" data-wow-duration=".6s")
+				div(class="s-type__before-3-inner")
+			+e.H2.title-dark--2( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s") Какое оборудование требуется для картирования?
+			+e.group-lg.text-white
+				+e.group-lg-title 
+					+e.group-icon-wrap: +icon("thermometer")
+					|  До&nbsp;100 и&nbsp;более логгеров температуры и&nbsp;влажности, которые:
+				+e.group.text-white( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")  Внесены в&nbsp;
+					| 
+					span.text-primary Государственный реестр средств измерений 
+					| 
+					| и&nbsp;имеют соответствующий сертификат
+				+e.group.text-white( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")  Имеют действующие 
+					| 
+					span.text-primary сертификаты о&nbsp;поверке 
+					| 
+					|сертифицированной Метрологической службой
+				+e.group.text-white( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")  Измеряют 
+					| 
+					span.text-primary температуру с&nbsp;погрешностью не&nbsp;более 0,5&deg;C
+					| 
+					|&nbsp;в диапазоне от &mdash;20&deg;C до&nbsp;+70&deg;C
+				+e.group.text-white( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")  Измеряют 
+					| 
+					span.text-primary относительную влажность с&nbsp;погрешностью не&nbsp;более&nbsp;3%
+					| 
+					| в&nbsp;диапазоне от&nbsp;2% до&nbsp;98%
+				+e.group.text-white( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")  Обеспечивают надежную и&nbsp;непрерывную запись данных времени, температуры и&nbsp;влажности
+				+e.group.text-white( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")  Имеют достаточно памяти для записи данных за&nbsp;все время исследования (до&nbsp;5-7&nbsp;дней)
+				+e.group.text-white( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")  Позволяют установить 
+					| 
+					span.text-primary период записи данных до&nbsp;одной минуты
+				+e.group.text-white( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")  Позволяют выгрузить данные в&nbsp;компьютерную систему для анализа
+			
+			+e.group-lg.text-white( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+				+e.group-lg-title 
+					+e.group-icon-wrap: +icon("temperature")
+					|  Также необходимы поверенные тепловизоры и&nbsp;портативные датчики температуры и&nbsp;влажности
+			
+			+e.group-lg.text-white( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+				+e.group-lg-title 
+					+e.group-icon-wrap: +icon("pc-computer-with-monitor")
+					|  Компьютер со&nbsp;специальным&nbsp;ПО для обсчета данных и&nbsp;визуализации результатов для отчета
+			
+	//- +s-form()
+	.bg-gray.bg-gray--md
+		.s-content-form.section
+			.container( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+				+form-wrap()(class="modal-win modal-win-bg-primary ")
+					.h3.strong.text-center.text-white.pb-3 Получить бесплатную консультацию специалиста по&nbsp;картированию
+					form 
+						+input("hidden"," a")(class="order ")
+						.row
+							.col-md-6
+								+input("text","Как Вас зовут?")(class="form-wrap__input-icon ")
+									+e.SPAN.icon-wrap
+										+icon("user") 
+							.col-md-6
+								+input("tel","Номер телефона")(class="form-wrap__input-icon ")
+									+e.SPAN.icon-wrap
+										+icon("tel")
+						+e.BUTTON.btn.btn.btn-block.btn-secondary(type="submit" value="" ) Бесплатный расчет
+					+polite('Бесплатный расчет')
+	
+		+b.s-content
+			.container
+				h2.text-md-center.text-left( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s") Как мы проводим картирование?
+				+e.row-item.row
+					.col( class=" wow fadeInRight " data-wow-offset="80" data-wow-duration=".6s").d-none.d-lg-block
+					
+						img.res-i(src="img6/img-1.jpg", alt="") 
+					.col-lg-6( class=" wow fadeInLeft " data-wow-offset="80" data-wow-duration=".6s")
+						+e.text-block
+							+e.row-title 
+								.h4.fw-600.text-primary Этап 1
+								.h4.fw-600 Предварительный аудит помещений
+							p На&nbsp;объекте наши специалисты осматривают помещения и&nbsp;холодильники, выявляют их&nbsp;особенности (расположение ворот, дверей, окон, систем отопления, охлаждения и&nbsp;вентиляции). Определяют конфигурацию воздушных потоков в&nbsp;местах хранения.
+
+							p Производят обмер зон картирования для составления  
+								br.d-none.d-md-block
+								| 
+								| 3D-визуализации объекта в&nbsp;итоговом отчете. Сравнивают фактическое расположение основных элементов на&nbsp;объекте с&nbsp;плановым. Фиксируют требуемые температурные диапазоны для каждой зоны хранения.
+
+							p Анализируют проблемные зоны поверенным тепловизором Testo и&nbsp;датчиками Testo Saveris&nbsp;2 T2, помогают настроить инженерное оборудование для получения лучших результатов.
+				
+				+e.row-item.row
+					.col-lg-6( class=" wow fadeInLeft " data-wow-offset="80" data-wow-duration=".6s")
+						+e.text-block
+							+e.row-title 
+								.h4.fw-600.text-primary Этап 2
+								.h4.fw-600 Определение мест и&nbsp;установка логгеров
+							p На&nbsp;основе информации полученной на&nbsp;предыдущем этапе по&nbsp;специальной методике специалисты выбирают и&nbsp;согласовывают с&nbsp;заказчиком точки размещения логгеров температуры и&nbsp;влажности. Далее размещаются логгеры для накопления данных на&nbsp;срок до&nbsp;7&nbsp;дней.
+
+							p Мы&nbsp;используем до&nbsp;160 логгеров iButton (Dallas Semiconductor) с&nbsp;актуальной поверкой, внесенные в&nbsp;Госреестр средств измерений (&#8470;&nbsp;31926-12) и&nbsp;имеющие допустимую погрешность.
+					.col( class=" wow fadeInRight " data-wow-offset="80" data-wow-duration=".6s").d-none.d-lg-block
+					
+						img.res-i(src="img6/img-2.jpg", alt="") 
+				
+				+e.row-item.row( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+					.col( class=" wow fadeInRight " data-wow-offset="80" data-wow-duration=".6s").d-none.d-lg-block
+					
+						img.res-i(src="img6/img-2.jpg", alt="") 
+					.col-lg-6( class=" wow fadeInLeft " data-wow-offset="80" data-wow-duration=".6s")
+						+e.text-block
+							+e.row-title 
+								.h4.fw-600.text-primary Этап 3
+								.h4.fw-600 Демонтаж логгеров и&nbsp;подготовка отчета.
+							p На&nbsp;основе информации полученной на&nbsp;предыдущем этапе по&nbsp;специальной методике специалисты выбирают и&nbsp;согласовывают с&nbsp;заказчиком точки размещения логгеров температуры и&nbsp;влажности. Далее размещаются логгеры для накопления данных на&nbsp;срок до&nbsp;7&nbsp;дней.
+
+							p Мы&nbsp;используем до&nbsp;160 логгеров iButton (Dallas Semiconductor) с&nbsp;актуальной поверкой, внесенные в&nbsp;Госреестр средств измерений (&#8470;&nbsp;31926-12) и&nbsp;имеющие допустимую погрешность.
+				blockquote По&nbsp;результатам проведенного нами картирования, Вы&nbsp;получите пакет документов, который позволяет пройти проверку и&nbsp;получить лицензию у&nbsp;проверяющих органов:
+		+s-where-control-2
+	+b.s-content-form--request.py-0( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+			.container
+				+form-wrap()(class="modal-win ")
+					.h3.strong.text-center.text-white.pb-3 Запрос коммерческого предложения
+					form 
+						+input("hidden"," a")(class="order ")
+						.row
+							.col-md-6
+								+input("text","Как Вас зовут?")(class="form-wrap__input-icon ")
+									+e.SPAN.icon-wrap
+										+icon("user") 
+							.col-md-6
+								+input("tel","Номер телефона")(class="form-wrap__input-icon ")
+									+e.SPAN.icon-wrap
+										+icon("tel")
+							
+							.col-md-6.d-none.d-md-block
+								+input("email","Электронная почта")(class="form-wrap__input-icon ")
+									+e.SPAN.icon-wrap
+										+icon("mail")
+							.col-md-6
+								+e.BUTTON.btn.btn.btn-block.btn-primary(type="submit" value="" ) Бесплатный расчет
+					+polite('Бесплатный расчет')
+	+s-why-we
+	+s-other-differents
+
+	+b.s-content-form--foot.section.pt-0( class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s")
+			.container
+				+form-wrap()(class="modal-win ")
+					.h3.strong.text-center.text-white.pb-3 Запрос коммерческого предложения
+					form 
+						+input("hidden"," a")(class="order ")
+						.row
+							.col-md-6
+								+input("text","Как Вас зовут?")(class="form-wrap__input-icon ")
+									+e.SPAN.icon-wrap
+										+icon("user") 
+							.col-md-6
+								+input("tel","Номер телефона")(class="form-wrap__input-icon ")
+									+e.SPAN.icon-wrap
+										+icon("tel")
+							
+							.col-md-6.d-none.d-md-block
+								+input("email","Электронная почта")(class="form-wrap__input-icon ")
+									+e.SPAN.icon-wrap
+										+icon("mail")
+							.col-md-6
+								+e.BUTTON.btn.btn.btn-block.btn-primary(type="submit" value="" ) Бесплатный расчет
+					+polite('Бесплатный расчет')
+	//- +s-schema
+	//- +s-gal
+	//- +s-api
+	//- +s-type
+	//- +s-control
+	//- +s-mode
+	//- +s-prod
+	//- +s-advantages
+	//- +s-tuning
+	//- +s-whom
+	+s-contact()
+	+footer()
+		
+		
