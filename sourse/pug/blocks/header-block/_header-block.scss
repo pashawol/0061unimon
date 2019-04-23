@@ -677,10 +677,16 @@
 		background-color: #ffffff;
 		list-style-type: none;
 		text-align: left;
+		@include media-breakpoint-up(xl) {
+
+			padding: rem(45) rem(40) rem(10);
+		}
+		
 		@include media-breakpoint-up(md) {
 
 			padding: rem(45) rem(15) rem(10);
 		}
+
 		padding: rem(25) rem(15) rem(10);
 		margin-bottom: rem(30);
 		position: relative;
