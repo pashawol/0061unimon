@@ -659,9 +659,17 @@
 	}
 	&--6{
 		background-position: bottom center;
+		// background-size: cover;
 		@include media-breakpoint-up(lg) {
 		padding-bottom: 120px;
 		margin-bottom: 0;
+		h1{
+			line-height: 1.5;
+			padding-bottom: rem(10);
+		}
+		.header-block__title-sub{
+			padding-bottom: rem(30);
+		}
 		}
 		margin-bottom: 40px;
 	}

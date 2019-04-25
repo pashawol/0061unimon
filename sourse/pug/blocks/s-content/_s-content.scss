@@ -1,6 +1,13 @@
 .s-content {
 	margin-top: rem(15);
+	@media (min-width: 768px){
 
+		.s-prod__before {
+			background-image: url(../img6/tor-6.png);
+			width: 230px;
+			height: 523px;
+		}
+	}
 	&--top {
 		@include media-breakpoint-up(lg) {
 			margin-top: -40px;
@@ -13,32 +20,27 @@
 
 	// z-index: 2;
 	@include media-breakpoint-up(lg) {
-		&--top::after {
-			content: '';
-			z-index: -2;
-			position: absolute;
-			width: 100%;
-			left: 0;
-			top: -20px;
+		&--top {
+			
 			background-color: #f3f3f3;
-			height: rem(200);
 		}
-
+		
 		&--top::before {
 			content: '';
-			position: absolute;
+			background-color: #f3f3f3;
+			
 			top: rem(120);
 			z-index: -2;
 			@include a-centt(x);
-			background-color: #f3f3f3;
-			border-radius: 50% 50% 0 0;
+			// background-color: $light;
 			height: rem(1200);
 			width: 180%;
 		}
 	}
 
 	&__text-block {
-		padding-top: rem(6);
+		// padding-top: rem(6);
+		margin-top: rem(-4);
 
 		p {
 			line-height: 1.76;
@@ -156,7 +158,7 @@ height: 33px;
 
 		.s-prod__before {
 			top: -10%;
-			right: 105%;
+			right: 112%;
 		}
 	}
 
