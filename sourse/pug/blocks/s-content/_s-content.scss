@@ -1,10 +1,6 @@
 .s-content {
-	@include media-breakpoint-up(md) {
-
-		margin-top: rem(15);
-	}
 	@media (min-width: 768px){
-
+		
 		.s-prod__before {
 			background-image: url(../img6/tor-6.png);
 			width: 230px;
@@ -12,11 +8,16 @@
 		}
 	}
 	&--top {
+									@include media-breakpoint-up(md) {
+								
+										margin-top: rem(15);
+									}
 		@include media-breakpoint-up(md) {
 
 			background-color: #f3f3f3;
 		}
 		@include media-breakpoint-up(lg) {
+			
 			margin-top: -40px;
 		}
 	}
@@ -103,7 +104,7 @@
 			padding: rem(37) rem(40) rem(28) rem(54);
 			margin-bottom: 0;
 		}
-		margin-bottom: 40px;
+		// margin-bottom: 5px;
 		padding: rem(20) rem(20);
 		position: relative;
 		@include media-breakpoint-up(md) {
@@ -321,6 +322,7 @@ height: 33px;
 			@extend .h5;
 			padding-bottom: em(6);
 			@include media-breakpoint-down(xs){
+				font-size: rem(15);
 
 			}
 		}
