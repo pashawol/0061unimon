@@ -60,7 +60,10 @@
 		line-height: 1.6;
 		color: #ffffff;
 		padding: rem(24) rem(30);
-		padding-right: rem(80);
+		@include media-breakpoint-up(lg) {
+
+			padding-right: rem(80);
+		}
 		span{
 			font-weight: 600;
 		}
@@ -107,11 +110,14 @@
 				@include a-centt(x);
 			}
 		}
-		.h6{
-
-			line-height: 1.8;
-		}
 	}
+			&__caption-text{
+				@extend .h6;
+				@include media-breakpoint-up(lg) {
+					font-size: 17px;
+				}
+				line-height: 1.8;
+			}
 	&__img-bg{
 		height: 190px;
 		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -126,6 +132,9 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		@include media-breakpoint-down(sm) {
+			font-size: rem(17 * 1.6);
+		} 
 		// margin-bottom: rem(20);
 		&::before{
 			content: '';

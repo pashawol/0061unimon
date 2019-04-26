@@ -1,5 +1,8 @@
 .s-content {
-	margin-top: rem(15);
+	@include media-breakpoint-up(md) {
+
+		margin-top: rem(15);
+	}
 	@media (min-width: 768px){
 
 		.s-prod__before {
@@ -9,6 +12,10 @@
 		}
 	}
 	&--top {
+		@include media-breakpoint-up(md) {
+
+			background-color: #f3f3f3;
+		}
 		@include media-breakpoint-up(lg) {
 			margin-top: -40px;
 		}
@@ -19,24 +26,25 @@
 	position: relative;
 
 	// z-index: 2;
-	@include media-breakpoint-up(lg) {
+	// @include media-breakpoint-up(lg) {
 		&--top {
 			
-			background-color: #f3f3f3;
 		}
-		
-		&--top::before {
-			content: '';
-			background-color: #f3f3f3;
-			
-			top: rem(120);
-			z-index: -2;
-			@include a-centt(x);
-			// background-color: $light;
-			height: rem(1200);
-			width: 180%;
+		@include media-breakpoint-up(md) {
+
+			&--top::before {
+				content: '';
+				background-color: #f3f3f3;
+				
+				top: rem(-120);
+				z-index: -2;
+				@include a-centt(x);
+				// background-color: $light;
+				height: rem(1200);
+				width: 180%;
+			}
 		}
-	}
+	// }
 
 	&__text-block {
 		// padding-top: rem(6);
@@ -45,7 +53,11 @@
 		p {
 			line-height: 1.76;
 			font-size: rem(17);
-			margin-bottom: em(32);
+			@include media-breakpoint-up(md) {
+
+				margin-bottom: em(32);
+			}
+			margin-bottom: em(10);
 		}
 	}
 
@@ -308,6 +320,9 @@ height: 33px;
 			}
 			@extend .h5;
 			padding-bottom: em(6);
+			@include media-breakpoint-down(xs){
+
+			}
 		}
 		.s-content__group{
 			font-size: rem(18);
@@ -328,6 +343,10 @@ height: 33px;
 		margin-right: 10px;
 	}
 	&__title-dark--2{
+		@include media-breakpoint-down(xs) {
+			font-size: 1.3rem;
+			max-width: 350px;
+		}
 		@include media-breakpoint-up(xl) {
 			// padding-bottom: rem(0);
 			margin-bottom: rem(40) !important;
@@ -349,7 +368,7 @@ height: 33px;
 		padding-bottom: rem(20);
 	}
 	blockquote{
-		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 		border-radius: 10px;
 		background-color: #ffffff;
 		color: $primary;
@@ -435,9 +454,17 @@ height: 33px;
 }
 
 .s-content-form{
+	@include media-breakpoint-down(xs) {
+		.modal-win-bg-primary{
+			
+			box-shadow: 0 27px 47px rgba(9, 65, 54, 0.75);
+			margin-bottom: 60px;
+		}
+		
+	}
 	
 	.col-md-6 .form-wrap__btn{
-		 margin-top: 0;
+		margin-top: 0;
 	}
 	@include media-breakpoint-up(xl) {
 		
@@ -508,6 +535,9 @@ height: 33px;
 	&--foot{
 		.form-wrap{
 			box-shadow: none !important;
+			@include media-breakpoint-down(xs) {
+				margin-bottom: 40px;
+			}
 		}
 		@include media-breakpoint-up(md) {
 			background-color: #293846;
@@ -522,3 +552,8 @@ height: 33px;
 		background-color: transparent !important;
 	}	
 }
+							@include media-breakpoint-down(xs) {
+								.h4.fw-600.text-primary{
+									font-size: 20px;
+								}
+							}

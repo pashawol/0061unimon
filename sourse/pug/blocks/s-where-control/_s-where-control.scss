@@ -14,7 +14,7 @@
 		margin-bottom: 43px;
 	}
 	&__item{
-		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 		border-radius: 10px;
 		background-color: #ffffff;
 		position: relative; 
@@ -81,7 +81,7 @@
 		&::before{
 				font-weight: bold;
 				@include media-breakpoint-up(md) {
-
+					
 					font-size: rem(70);
 				}
 				font-size: rem(35);
@@ -89,12 +89,16 @@
 				display: block;
 				color: $primary;
 				margin-right: em(5);
+			}
 		}
-	}
-	&__img-foot{
-		padding-top: rem(30);
-		img{
-			margin-left: -50px;
+		&__img-foot{
+			padding-top: rem(30);
+			img{
+				@include media-breakpoint-down(xs) {} 
+				@include media-breakpoint-up(sm) {
+
+					margin-left: -50px;
+				}
 		}
 	}
 	//
@@ -125,9 +129,13 @@
 	@include media-breakpoint-down(md) {}
 	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
-
+	
 }
 .s-content-form--request{
-	margin-top: -240px;
+	@include media-breakpoint-up(sm) {
+
+		margin-top: -240px;
+	}
+	margin-top: -180px;
 	margin-bottom: 10px;
 }

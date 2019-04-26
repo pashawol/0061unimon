@@ -9,7 +9,7 @@ html {
 
 body {
 	// opacity: .7;
-	min-height: 12000px;
+	// min-height: 12000px;
 	background-color: transparent;
 }
 
@@ -374,6 +374,7 @@ overflow: hidden;
 		color: #ffffff;
 }
 }
+  
 
 input,
 textarea {
@@ -476,4 +477,8 @@ strong,
 
 ::selection{
 	// background-color: $primary;
+}
+
+.p{
+	@extend p;
 }

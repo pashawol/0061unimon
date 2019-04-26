@@ -1,0 +1,258 @@
+
+.footer__smaller { max-width: 450px; }
+
+.form-wrap textarea { margin-bottom: 0px; !important}
+.form-header {margin-bottom: 30px;}
+ 
+.s-contact--page h1 { margin-bottom: 25px; }
+.row+.s-type__title-block { padding-top: 30px;}
+.s-prod__img-wrap { min-height: 70px; }
+.s-prod__img-wrap img  { max-height: 130px;}
+
+.s-consult { padding-top: 20px; }
+.s-advantages {padding-bottom: 40px; }
+
+.header-block--3 { padding-bottom: 50px; }
+
+.header-block--3 .h4 {padding-top: 0px !important ; }
+.s-form--3land .form-wrap__foot-row { margin-top: 0px;} 
+.s-form .form-wrap__big-title { margin-bottom: 20px;}
+
+.heating .s-prod { padding-top: 40px; }
+
+.s-logo .s-logo__body { padding-bottom: 20px; }
+.pharma .popover { top: -35px !important;}
+
+.heating .consult1 { display: none;}
+.heating .s-mode   { display: none;}
+
+.s-work-3 h2 { margin-bottom: 50px}
+.s-work-2 h2 { margin-bottom: 50px}
+
+.s-form { margin-top: -30px; }
+.polite { font-size: 12px; }
+.modal .polite { font-size: 14px; }
+
+.header-block { padding-bottom: 70px; }
+.pharma .s-form .h5 { margin-top: -12px; font-size: 18px}
+.pharma .s-consult .h3 {font-size: 24px; padding-bottom: 0px; padding-top: 10px; line-height: 33px; }
+.pharma .s-contact .h3 { padding-bottom: 0px;}	
+.pharma #s-partner { margin-bottom: -30px; }
+
+.heating .s-type { background-image: none; background-color: #f3f3f3; }
+.heating .s-prod { background-color: transparent; }
+.heating .s-work-3__foot { margin-top: -50px; padding-bottom: 20px;}
+.heating .form-wrap__foot-row { padding-top: 20px;}
+.heating .form-wrap__foot-row .text-white { padding-top: 10px; padding-left:25px !important; }
+
+
+.top-nav li ul li { display: block;}
+
+.s-price .s-price__body { border-bottom: 1px solid #1c9a9f; }
+
+#modal-boiler-scheme textarea.form-wrap__input-icon { padding-left: 20px; }
+
+/*.s-work-2 { z-index: 2; position: relative; }*/
+
+.s-work-2__block br { display: inline !important; }
+
+
+.s-consult { position: relative; background-color: #f3f3f3; }
+.s-consult  button {padding-left:20px; padding-right:20px; }
+.s-consult .form-wrap {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 966px;
+    margin-top: -40px;
+    position: relative;
+    z-index: 2;
+    padding: 20px 15px 20px;
+    overflow: hidden;
+}
+
+.header-block__img-wrap-3::after { right: -30px; }
+
+.header_description ul { list-style-type: none; }
+
+.header_description li::before {
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    background-color: #1ab394;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    left: 0;
+    top: 8px;
+}
+
+.header_description li {
+    color: #2f4050;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.9;
+    position: relative;
+    margin-left: 24px;
+    padding-left: 25px;
+}
+
+.pharma .s-form--3land::after { display: none; }
+.s-form--3land::before { display: none; }
+.montselect {margin-top: 20px; margin-left: 20px}
+
+.s-work__item::before { margin-top: -25px; }
+
+.single-product .header-block { padding-bottom: 20px}
+
+.s-ready-kits__item {padding-top:15px}
+
+.single-product .header-block__price-big { text-align: center; padding-top:10px; }
+.single-product .priceline    { justify-content: center}
+.single-product .s-char__col  { margin-bottom: 15px;  }
+.single-product .s-char__item { padding: 25px }
+.single-product .s-consult  {padding-top: 60px; }
+.single-product .s-consult  .form-header {margin-bottom: -10px}
+.single-product .apps {margin-top: 20px;}
+
+.single-product .header-block--4 p {margin-bottom: 15px}
+.header-block--4 h1  {padding-top:0px}
+    
+.s-about ul { list-style: none; }
+
+/* ÐœÐ¾Ð½Ð¸Ñ‚Ð¾Ñ€Ð¸Ð½Ð³ Ñ‚ÐµÐ¼Ð¿ÐµÑ€Ð°Ñ‚ÑƒÑ€Ñ‹ Ð¸ Ð²Ð»Ð°Ð¶Ð½Ð¾ÑÑ‚Ð¸*/
+.header-block__list-item.big { font-size: 17px; font-weight: bold; margin-top: 6px; }
+.header-block__list-item.big:before { top: 9px; }
+.header-block__small-title.little { padding-top: 10px; font-size: 17px; font-weight: 400; }
+@media (max-width: 768px) { 
+	.header-block__small-title.little:before { display:none; }
+	.page-id-1444 .s-form .form-wrap__big-title { margin-bottom: -10px; }
+}
+
+@media (min-width: 768px) {
+	.page-id-1444 .s-form .form-wrap__btn { min-width: 220px; margin-top: 0px; }
+	.page-id-1444 .s-form .form-wrap .polite { padding-top: 10px; }
+}
+
+
+.s-about li::before 
+{
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    background-color: #1ab394;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    left: 0;
+    top: .4em;
+}
+
+.s-about li {
+    margin-left: 0;
+    font-size: .93333rem;
+    font-weight: 500;
+    line-height: 1.71;
+    margin-bottom: 1em;	
+	color: #2f4050;
+    position: relative;
+    padding-left: 25px;
+}
+
+.top-nav__tel { color: #1ab394!important; }
+
+@media (min-width: 576px)
+{
+	.s-consult .form-wrap { padding: 40px 20px 30px; }
+}
+
+@media (min-width: 768px)
+{
+	
+	.header-block { padding-bottom: 175px; }
+	.mainpage .header-block { padding-bottom: 70px; }
+		
+	.s-schema .cloud {margin-top: -80px}
+	
+	.s-whom  {padding-bottom: 20px; }
+	.s-contact--page h1 { margin-bottom: 50px; }
+	.s-contact--page    { background-position: 0px 455px;}
+	.s-contact__map>*   { height: 315px; }
+	.s-contact--page .s-contact__map { height: 320px; }
+	.s-contact--page .text-block { max-width: 500px; }
+	.s-contact__smaller  { font-size: 14px; }
+	.s-contact__smallest { font-size: 13px; }
+	.s-contact__mail {font-size: 1.5rem;}
+	.s-contact--page .text-block h2 { margin-bottom: 30px; }
+	
+	.heating .s-consult { padding-top: 10px; }
+
+	.s-prod .container h2 {margin-bottom: 1.2em;}
+
+	.heating .s-prod { padding-top: 80px; position: relative;}
+	.heating .s-prod .container { position: relative; z-index: 4; }
+	.heating .s-prod {     padding-top: 75px;      padding-bottom: 21px; }
+	.heating .s-prod::after {
+		content: '';
+		position: absolute;
+		background-color: #f3f3f3;
+		height: 38.83333em;
+		width: 153.36333em;
+		-webkit-border-radius: 153.36333em/38.83333em;
+		border-radius: 153.36333em/38.83333em;
+		top: 78%;
+		left: 50%;
+		margin-left: -76.68167em;
+	}
+	
+	.heating .s-mode::before { display: none; }		
+	.s-work::before { display: none; }	
+	.heating .s-consult { display: block;}
+	.heating .s-mode    { display: block;}
+	.heating .consult2  { display: none;}
+	.heating .s-type { background-image: none; background-color: #FFF; padding-bottom: 0px; }
+	.heating .s-mode { padding-bottom: 30px; }
+	.heating .s-work-3__foot { margin-top: 20px; padding-bottom: 0px;}
+	
+	.pharma .s-consult .h3 { font-size: 36px; padding-bottom: 0px; line-height: 45px; padding-top: 0px; margin-top: -10px;  }
+	.pharma .s-consult .container { z-index:2; position:relative;  }
+	.pharma .s-consult {background: none}
+	
+	.top-nav:not(.fixed):not(.top-nav--white) .top-nav__cont span { color: #fff!important; }
+	
+}
+/**/
+	
+@media (min-width: 992px) {
+	
+	.polite { font-size: 15px; }
+	.s-prod__img-wrap img  { max-height: 150px;}
+
+	.s-consult .form-wrap {
+		margin-top: 0px;
+		margin-bottom: 50px;
+		padding: 65px 40px 50px;
+	}
+	.header-block__img-block--3 { top: 30px; }
+	.header_description ul {
+		max-width: 360px;
+		margin-top: 0;
+	}
+	
+	.mainpage .s-form { margin-top: -50px; }
+	.heating  .s-form { margin-top: -200px; }
+	.pharma   .s-form { margin-top: -200px; }
+	
+	.s-consult .form-wrap { margin-top: 40px;} 
+	.header-block--3 { padding-bottom: 215px; }
+	
+	.single-product .priceline { padding-top: 20px; }
+	.single-product .header-block h1 {margin-bottom: 20px;}
+	.single-product .s-about p {max-width: 480px}
+	
+	.single-product .s-consult { background: none; margin-top: -30px;}
+	.single-product .priceline { justify-content: flex-start}
+	.single-product .s-consult  {padding-top: 20px; }
+
+
+}
