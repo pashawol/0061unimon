@@ -1,0 +1,218 @@
+mixin sCards()
+	// start sCards
+	+b.sCards.section#sCards
+		.container
+			+e.items
+				+sCardsItem({
+					title: `Беспроводная система для <a href="#">небольших</a> объектов`,
+					distanceStars: 1,
+					distanceDescr: 'Bluetooth (до 10 метров)',
+
+					batStars: 1,
+					batDescr: 'Хватает до 4-х месяцев',
+
+					ballChecked: false,
+					ballTxt: 'Не внесен в Госреестр СИ',
+					ballDescr: undefined,
+
+					ethernetBallChecked: false,
+					ethernetDescrClasses: 'red',
+
+					bbImgNum: 1,
+
+					bbBigDescr: undefined,
+
+					bbSmDescr: {
+						title: 'Датчик  Xiaomi',
+						price: '1 900 Р',
+					},
+
+					bbMainDescr: {
+						title: 'Контроллер AlertBox Lite',
+						price: '6 900 Р',
+					},
+				})
+				+sCardsItem({
+					title: `Беспроводная система для <a href="#">средних</a> объектов`,
+					distanceStars: 4,
+					distanceDescr: 'LoRaWAN (до 300 метров)',
+
+					batStars: 3,
+					batDescr: 'Хватает до 1-го года',
+
+					ballChecked: true,
+					ballTxt: 'Сенсор из Госреестра СИ',
+					ballDescr: 'с поверкой на 2 года',
+
+					ethernetBallChecked: false,
+					ethernetDescrClasses: 'red',
+
+					bbImgNum: 2,
+
+					bbBigDescr: undefined,
+
+					bbSmDescr: {
+						title: 'Датчик AlerNode TH Basic',
+						price: '4 400 Р',
+					},
+
+					bbMainDescr: {
+						title: 'Контроллер AlertBox Lite',
+						price: '9 500 Р',
+					},
+				})
+				+sCardsItem({
+					title: `Беспроводная система для <a href="#">больших</a> и <a href="#">сложных</a> объектов`,
+					distanceStars: 5,
+					distanceDescr: 'LoRaWAN (до 500 метров)',
+
+					batStars: 5,
+					batDescr: 'Хватает на 2-4 года',
+
+					ballChecked: true,
+					ballTxt: 'Сенсор из Госреестра СИ  ',
+					ballDescr: 'с поверкой на 2 года',
+
+					ethernetBallChecked: true,
+					ethernetDescrClasses: 'green',
+
+					bbImgNum: 2,
+
+					bbBigDescr: {
+						title: 'Датчик  Xiaomi',
+						price: '2 500 Р',
+					},
+
+					bbSmDescr: {
+						title: 'Датчик  Xiaomi',
+						price: '4 400 Р',
+					},
+
+					bbMainDescr: {
+						title: 'Контроллер AlertBox Lite',
+						price: '19 500 Р',
+					},
+				})
+				//- +sCardsItem({title: ``, distanceStars: '', distanceDescr: '', batStars: '', batDescr: '', ballChecked: true, ballTxt: 'Не внесен в Госреестр СИ', ballDescr: undefined, ethernetBallChecked: false, ethernetDescrClasses: 'red', bbImgNum: 1, bbBigDescr: {title: '', price: '',}, bbSmDescr: {title: '', price: '',}, bbMainDescr: {title: '', price: '',},})
+	// end sCards
+
+mixin sCardsItem(data)
+	+e.item
+		+e.main-row.row.align-items-center
+			+e.col--left.col-lg-7.col-xl-6
+				+e.title!=data.title
+				+e.sub-row.row
+					+sCardsDItem({
+						title: 'Дальность:',
+						activeStars: data.distanceStars,
+						descr: data.distanceDescr,
+						colClasses: 'col-6',
+					})
+					+sCardsDItem({
+						title: 'Батарейка:',
+						activeStars: data.batStars,
+						descr: data.batDescr,
+						colClasses: 'col-6',
+					})
+					+sCardsDItem({
+						title: 'Реестр:',
+						descr: data.ballDescr,
+						colClasses: 'col-12',
+					})
+						+e.ball-row.row
+							.col-auto
+								if data.ballChecked
+									+e.ball--green
+										+icon('checked')
+								else
+									+e.ball--red
+										+icon('cross')
+							.col
+								+e.ball-txt=data.ballTxt
+				+e.connection-title Связь контроллера с сервером:
+				+e.c-row.row
+					+sCardsCItem({
+						imgPass: 'img/sCardsCItem-1.png',
+					})
+					+sCardsCItem({
+						addClasses: 'green',
+						imgPass: 'img/sCardsCItem-2.svg',
+						hasBall: true,
+						ballChecked: true,
+						descr: 'GSM',
+						descrClasses: 'green',
+					})
+					+sCardsCItem({
+						addClasses: 'green',
+						imgPass: 'img/sCardsCItem-3.svg',
+						hasBall: true,
+						ballChecked: true,
+						descr: 'Wi-Fi',
+						descrClasses: 'green',
+					})
+					+sCardsCItem({
+						addClasses: 'green',
+						imgPass: 'img/sCardsCItem-4.svg',
+						hasBall: true,
+						ballChecked: data.ethernetBallChecked,
+						descr: 'Ethernet',
+						descrClasses: data.ethernetDescrClasses,
+					})
+					+sCardsCItem({
+						imgPass: 'img/sCardsCItem-5.png',
+					})
+				+e.bot-row.row.align-items-center.d-none.d-lg-flex
+					.col-md
+						+e.btn(href="#") Рассчитать стоимость системы
+					.col-md-auto
+						+e.detail(href="#") Подробнее
+			+e.col--right.col-lg
+				+e.big-ball
+					+e.bb-img--big
+						img(loading="lazy" src=`img/bb-big-img-${data.bbImgNum}.png` alt="")
+						if data.bbBigDescr
+							+e.bb-descr--big
+								+e.bb-title--big=data.bbBigDescr.title
+								+e.price--big=data.bbBigDescr.price
+					+e.bb-img--sm
+						img(loading="lazy" src=`img/bb-sm-img-${data.bbImgNum}.png` alt="")
+						if data.bbSmDescr
+							+e.bb-descr--sm
+								+e.bb-title--sm=data.bbSmDescr.title
+								+e.price--sm=data.bbSmDescr.price
+					if data.bbMainDescr
+						+e.bb-descr--main
+							+e.bb-title--main=data.bbMainDescr.title
+							+e.price--main=data.bbMainDescr.price
+			.col-12.d-lg-none
+				+e.bot-row.row.align-items-center
+					.col-md
+						+e.btn(href="#") Рассчитать стоимость системы
+					.col-md-auto.text-center
+						+e.detail(href="#") Подробнее
+
+mixin sCardsCItem(data)
+	.col.text-center
+		+e.c-box(class=`${data.addClasses || ''}`)
+			img(loading="lazy" src=`${data.imgPass}` alt="")
+			if data.hasBall
+				if data.ballChecked
+					+e.ball--green.--c-ball
+						+icon('checked')
+				else
+					+e.ball--red.--c-ball
+						+icon('cross')
+		if data.descr
+			+e.c-desr(class=data.descrClasses)=data.descr
+
+mixin sCardsDItem(data)
+	.col-sm-4(class=data.colClasses)
+		+e.d-title=data.title
+		block
+		if data.activeStars
+			+e.stars
+				-for(let i = 1; i <= 5; i++)
+					+e.star(class=`${data.activeStars >= i ? 'active' : ''}`)
+						+icon('star')
+		if data.descr
+			+e.d-descr=data.descr

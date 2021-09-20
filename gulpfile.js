@@ -1,6 +1,17 @@
 'use strict';
 
 global.$ = {
+	postcss: require('gulp-postcss'),
+	//sass: require('gulp-sass')(require('sass')),
+	cssnano: require('cssnano'),
+	nested: require('postcss-nested'),
+	autoprefixer: require('autoprefixer'),
+	gcmq: require('gulp-group-css-media-queries'),
+	rename: require('gulp-rename'),
+	//sassGlob: require('gulp-sass-glob'),
+	public: 'public',
+	sourse: 'sourse',
+
 	gulp: require('gulp'), 
 
 	bourbon: require('node-bourbon'),
@@ -20,6 +31,8 @@ $.path.tasks.forEach(function (taskPath){
 		
 		 
 $.gulp.task('default', $.gulp.series(
-	$.gulp.parallel('svg','pug','scripts:lib','scripts','sass'),
+	$.gulp.parallel('svg','pug',
+		//'scripts:lib',
+		'scripts','sass'),
 	$.gulp.parallel('watch','serv')
 	));

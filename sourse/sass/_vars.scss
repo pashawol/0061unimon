@@ -7,12 +7,27 @@
 @include font-face (Manrope, "../fonts/Manrope-Semibold/Manrope-Semibold", 600, $file-formats: eot woff ttf);
 @include font-face (Manrope, "../fonts/Manrope-Thin/Manrope-Thin", 100, $file-formats: eot woff ttf);
 
+//new
+@include font-face (Manrope, "../fonts/Manrope-Thin/Manrope-Thin", 100, $file-formats: eot woff ttf);
+$mono2: 'PT Sans';
 
 $default-font: Manrope;
+
+$dark-blue: #293846;
+$dark-blue2: #37536D;
+$teal: #28B0A0;
+$teal2: #3DCDB0;
+$red: #FF4949;
+$light: #AFBECC;
 
 $def: #373a41;
 $em-base: 15px;
 $small: rem(14);
+
+
+
+//end new
+
 // обсалютное центрирование
 @mixin a-cent($w: -50%, $h: -50%) {
 	position: absolute;

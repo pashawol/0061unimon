@@ -1,6 +1,12 @@
 $output-bourbon-deprecation-warnings: false;
+// @use "sass:list";
+// @use "sass:map";
+@use "sass:math";
+// @use "sass:meta";
+
 // @import "mq";
-@import "bourbon";
+@import "bourbon/app/assets/stylesheets/bourbon";
+
 @import "vars";
 @import "bootstrap/bootstrap";
 @import "../libs/animate";
@@ -61,6 +67,7 @@ $output-bourbon-deprecation-warnings: false;
 @import "../pug/blocks/s-save/_s-save";
 @import "../pug/blocks/s-economy/_s-economy";
 @import "../pug/blocks/s-logo/_s-logo";
+@import "../pug/blocks/sCards/_sCards";
 
 @import "../pug/blocks/s-char/_s-char";
 @import "../pug/blocks/s-about/_s-about";

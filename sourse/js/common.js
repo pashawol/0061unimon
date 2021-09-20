@@ -47,6 +47,13 @@ jQuery(document).ready(function ($) {
 		$('#modal-win').modal('hide')
 		$('#thanks').modal('show')
 	});
+
+	//-pp
+	var x = window.location.host;
+	var screenName = '01-edit.png';
+	if (screenName && x.includes("localhost:30")) {
+		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
+	}
 });
 
 jQuery(document).ready(function ($) {

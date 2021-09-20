@@ -68,13 +68,13 @@
 	}
 	&__item{
 		@include media-breakpoint-down(xs) {
-			@include roww(10)
+			@include roww(10);
 		}
 		@include media-breakpoint-up(xl) {
 			min-width: 350px;
 		}
 		.row{
-			@include roww(10)
+			@include roww(10);
 			align-items: center;
 		}
 		margin-bottom: 20px;
