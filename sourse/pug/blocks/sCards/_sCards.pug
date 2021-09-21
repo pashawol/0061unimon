@@ -33,8 +33,6 @@ mixin sCards()
 					},
 				})
 				+sCardsItem({
-					addTitleColClasses: 'order-lg-last',
-
 					title: `Беспроводная система для <a href="#">средних</a> объектов`,
 					distanceStars: 4,
 					distanceDescr: 'LoRaWAN (до 300 метров)',
@@ -101,7 +99,7 @@ mixin sCards()
 mixin sCardsItem(data)
 	+e.item(class=" wow fadeInLeft " data-wow-offset="80" data-wow-duration="1.5s")
 		+e.main-row.row.align-items-center
-			+e.col--left.col-lg-7.col-xl-6(class=`${data.addTitleColClasses || ''}`)
+			+e.col--left.col-lg-7.col-xl-6
 				+e.title!=data.title
 				+e.sub-row.row
 					+sCardsDItem({

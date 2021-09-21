@@ -27,9 +27,9 @@
 		}
 
 
-		//&:nth-child(even){
-		//	--main-row-fd: row-reverse;
-		//}
+		&:nth-child(even){
+			--main-row-fd: row-reverse;
+		}
 	}
 
 	&__main-row{
@@ -40,9 +40,9 @@
 			--bs-gutter-y: #{60px};
 		}
 
-		//@include media-breakpoint-up(lg){
-		//	flex-direction: var(--main-row-fd, row);
-		//}
+		@include media-breakpoint-up(lg){
+			flex-direction: var(--main-row-fd, row);
+		}
 	}
 
 	&__col{
