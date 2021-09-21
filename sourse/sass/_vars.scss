@@ -67,6 +67,15 @@ $small: rem(14);
 	}
 }
 
+@mixin roww2($a){
+  margin-left: -$a;
+  margin-right: -$a;
+  >*{
+    padding-left: $a;
+    padding-right: $a;
+  }
+}
+
 @mixin center($w){
   margin-left: auto;
   margin-right: auto;

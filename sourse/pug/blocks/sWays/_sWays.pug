@@ -1,0 +1,32 @@
+mixin sWays()
+	// start sWays
+	+b.sWays.section#sWays
+		+e.bg--left
+			img(loading="lazy" src="img/sWays-bg-left.svg" alt="")
+		+e.bg--right
+			img(loading="lazy" src="img/sWays-bg-right.svg" alt="")
+		.container
+			+e.section-title
+				h2.text-center Варианты программного обеспечения Unimon
+			+e.row.row
+				+sWaysItem({
+					title: 'Облачная версия',
+					titleAddClasses: 'teal',
+					descr: 'Работает на серверах Unimon в защищенных ЦОД с резервным электропитанием и каналами связи.',
+					imgNum: 1,
+				})
+				+sWaysItem({
+					title: 'Локальная версия ',
+					descr: 'Комплекс ПО Unimon устанавливается на сервер клиента и может работать  в закрытой сети без доступа в Интернет.',
+					imgNum: 2,
+				})
+	// end sWays
+
+mixin sWaysItem(data)
+	.col-md-6
+		+e.item
+			+e.inner
+				+e.title(class=`${data.titleAddClasses || ''}`)=data.title
+				+e.descr=data.descr
+				+e.img
+					img(loading="lazy" src=`img/sWay-${data.imgNum}.svg` alt="")

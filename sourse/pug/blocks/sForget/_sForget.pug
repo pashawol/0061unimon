@@ -1,0 +1,65 @@
+mixin sForget()
+	// start sForget
+	+b.sForget.section#sForget
+		+e.bg--left
+			img(loading="lazy" src=`img/sForget-bg-left.svg` alt="")
+		+e.bg--right
+			img(loading="lazy" src=`img/sForget-bg-right.png` alt="")
+		.container
+			+e.section-title.text-center
+				h2 Забудьте про проблемы с периодической поверкой!
+				p
+					| Наши беспроводные датчики состоят из радиомодуля и дешевого поверенного сенсора из Госреестра СИ.
+					br.d-none.d-xl-block
+					| Это позволяет по истечению срока действия поверки просто заменить сенсоры на новые поверенные по цене поверки.
+				b Что необходимо сделать, когда приходит время периодической поверки:
+			+e.main-row.row
+				+sForgetItem({
+					title: 'Для обычных систем:',
+					listClasses: 'red',
+					itemsList: [
+						'Демонтировать датчики',
+						'Установить временные поверенные датчики ',
+						'Отвезти датчики на поверку в аккредитованную лабораторию (ЦСМ), поверить их и забрать',
+						'Настроить датчики (обычно в ЦСМ их обнуляют)',
+						'Смонтировать поверенные датчики ',
+					],
+					ballClasses: 'red',
+					calVal: 'Около месяца',
+					calValClass: 'red',
+					footBig: 'Есть риск, что датчики не пройдут поверку',
+					btnTxt: false,
+				})
+				+sForgetItem({
+					title: 'Для систем Unimon:',
+					listClasses: 'green',
+					itemsList: [
+						'Получить новые уже поверенные сенсоры по цене поверки',
+						'Заменить сенсоры у радиомодулей без остановки системы мониторинга',
+					],
+					ballClasses: 'green',
+					calVal: '1-3 часа',
+					calValClass: 'green',
+					footBig: 'Обновляется гарантия на сенсоры',
+					btnTxt: 'Рассчитать стоимость системы',
+				})
+
+	// end sForget
+
+mixin sForgetItem(data)
+	.col-lg-6
+		+e.item
+			+e.inner
+				+e.title=data.title
+				+e.UL.list(class=data.listClasses)
+					- for(let item of data.itemsList)
+						li=item
+				+e.c-wrap
+					+e.ball(class=data.ballClasses)
+						img(loading="lazy" src="img/calendar.svg" alt="")
+					+e.c-txt
+						+e.c-title Сроки:
+						+e.c-val(class=data.calValClass)=data.calVal
+				+e.f-big=data.footBig
+				if data.btnTxt
+					+e.btn(href="#")=data.btnTxt
