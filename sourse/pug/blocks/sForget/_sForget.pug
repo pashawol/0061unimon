@@ -1,9 +1,9 @@
 mixin sForget()
 	// start sForget
 	+b.sForget.section#sForget
-		+e.bg--left
+		+e.bg--left(class="wow fadeInLeft" data-wow-offset="80" data-wow-duration="1.5s")
 			img(loading="lazy" src=`img/sForget-bg-left.svg` alt="")
-		+e.bg--right
+		+e.bg--right(class=" wow fadeInRight" data-wow-offset="80" data-wow-duration="1.5s")
 			img(loading="lazy" src=`img/sForget-bg-right.png` alt="")
 		.container
 			+e.section-title.text-center
@@ -48,7 +48,7 @@ mixin sForget()
 
 mixin sForgetItem(data)
 	.col-lg-6
-		+e.item
+		+e.item(class=" wow fadeInLeft " data-wow-offset="80" data-wow-duration="1.5s")
 			+e.inner
 				+e.title=data.title
 				+e.UL.list(class=data.listClasses)

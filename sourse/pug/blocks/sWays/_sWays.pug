@@ -1,9 +1,9 @@
 mixin sWays()
 	// start sWays
 	+b.sWays.section#sWays
-		+e.bg--left
+		+e.bg--left(class="wow fadeInLeft" data-wow-offset="80" data-wow-duration="1.5s")
 			img(loading="lazy" src="img/sWays-bg-left.svg" alt="")
-		+e.bg--right
+		+e.bg--right(class=" wow fadeInRight" data-wow-offset="80" data-wow-duration="1.5s")
 			img(loading="lazy" src="img/sWays-bg-right.svg" alt="")
 		.container
 			+e.section-title
@@ -24,7 +24,7 @@ mixin sWays()
 
 mixin sWaysItem(data)
 	.col-md-6
-		+e.item
+		+e.item(class="wow fadeIn" data-wow-offset="80" data-wow-duration="1.5s")
 			+e.inner
 				+e.title(class=`${data.titleAddClasses || ''}`)=data.title
 				+e.descr=data.descr

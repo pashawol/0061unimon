@@ -17,12 +17,15 @@ include ../blocks/s-contact/_s-contact.pug
 include ../blocks/sCards/_sCards.pug
 include ../blocks/sForget/_sForget.pug
 include ../blocks/sWays/_sWays.pug
+include ../blocks/sForget/_sForget.pug
 
 block title
 	title ТЕМПЕРАТУРНОЕ КАРТИРОВАНИЕ  И ВАЛИДАЦИЯ
 
 block pagecontent
 	//-+sForget()
+	+sCards()
+	+sForget()
 	+sWays()
 	//+mob-mnu()
 	//+header()
